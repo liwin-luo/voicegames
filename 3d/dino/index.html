@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dino 3D — Shout to Jump | Voicegames</title>
+<meta name="description" content="Dino 3D is a free 30-second voice game. Hold a sound and a block dinosaur stays up. Go quiet and it falls. Volume stays on your device.">
+<meta name="keywords" content="dinosaur voice game, 3d pixel game, shout to jump, volume game, microphone game">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/3d/dino">
+<meta property="og:title" content="Dino 3D — Shout to Jump | Voicegames">
+<meta property="og:description" content="Dino 3D is a free 30-second voice game. Hold a sound and a block dinosaur stays up. Go quiet and it falls. Volume stays on your device.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://voicegames.org/3d/dino">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dino 3D — Shout to Jump | Voicegames">
+<meta name="twitter:description" content="Dino 3D is a free 30-second voice game. Hold a sound and a block dinosaur stays up. Go quiet and it falls. Volume stays on your device.">
+<meta name="theme-color" content="#140e0c">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,560&family=Newsreader:opsz,wght@6..72,400;6..72,550&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Dino 3D",
+  "url": "https://voicegames.org/3d/dino",
+  "description": "Hold a sound and a block dinosaur stays up. Go quiet and it falls. Thirty seconds.",
+  "playMode": "SinglePlayer",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@type": "WebSite", "name": "Voicegames", "url": "https://voicegames.org/" }
+}
+</script>
+</head>
+<body data-game="dino" data-look="vox">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/">All games</a>
+    <div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+  </div>
+  <div class="stage play">
+    <p class="kicker" id="kicker">Hold the sound</p>
+    <h1>Dino 3D</h1>
+    <canvas id="world" class="world" width="800" height="360" aria-label="A block dinosaur running toward stones"></canvas>
+    <p class="heard" id="heard">Keep the sound going and the dinosaur stays up.</p>
+    <div class="meters">
+      <div class="stat"><b id="score">0</b><span>passed</span></div>
+      <div class="clock" aria-hidden="true">
+        <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+        <b id="time">30</b>
+      </div>
+    </div>
+    <div class="actions"><button id="go" type="button">Start</button></div>
+  </div>
+</section>
+<article>
+  <h2>How to play Dino 3D</h2>
+  <p>Press Start and allow the microphone. The dinosaur runs toward stones. Hold a sound and it rises, then stays up. Go quiet and it falls. Each stone you clear adds one. Touch a stone and the round ends. You have 30 seconds.</p>
+  <p>You look down the track from behind the dinosaur. Stones stand on the path and come toward you. Dino 3D measures volume in the page. It does not send audio to a speech service and it does not keep a recording.</p>
+</article>
+<nav class="more" aria-label="Other games">
+  <h2>Other games</h2>
+  <ul>
+    <li><a href="/3d/flap">Flap 3D</a> — hold to rise</li>
+    <li><a href="/3d/float">Float 3D</a> — steer through the hole</li>
+    <li><a href="/dino">Dino</a> — the flat picture</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames is an independent browser game site.</p>
+  <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/vox.js"></script>
+<script src="/js/world.js"></script>
+</body>
+</html>
