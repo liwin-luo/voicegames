@@ -17,6 +17,10 @@ let running = false
 let left = 30
 let score = 0
 let stream, audio, analyser, data, raf, level = 0
+let keyLift = false
+let pointerDown = false
+let pointerLift = 0
+let starting = false
 let y = LINE - 22
 let pace = 0
 let vy = 0
@@ -232,6 +236,10 @@ function step(dt) {
     let sum = 0
     for (let i = 0; i < data.length; i++) { const v = (data[i] - 128) / 128; sum += v * v }
     level = Math.sqrt(sum / data.length)
+  } else level = 0
+  if (look === "vox") {
+    if (game === "float") level = Math.max(level, pointerDown ? pointerLift * 0.16 : 0, keyLift ? 0.16 : 0)
+    else if (keyLift || pointerDown) level = Math.max(level, 0.12)
   }
   if (game === "dino") {
     if (level > .06) {
@@ -300,19 +308,32 @@ function frame(now) {
   if (running) raf = requestAnimationFrame(frame)
 }
 async function start() {
-  try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }) }
-  catch (e) { heardEl.textContent = "The microphone was blocked."; return }
-  audio = new AudioContext()
-  const source = audio.createMediaStreamSource(stream)
-  analyser = audio.createAnalyser()
-  analyser.fftSize = 1024
-  source.connect(analyser)
-  data = new Uint8Array(analyser.fftSize)
+  if (running || starting) return
+  starting = true
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+    audio = new AudioContext()
+    const source = audio.createMediaStreamSource(stream)
+    analyser = audio.createAnalyser()
+    analyser.fftSize = 1024
+    source.connect(analyser)
+    data = new Uint8Array(analyser.fftSize)
+  } catch (e) {
+    if (look !== "vox") {
+      starting = false
+      heardEl.textContent = "The microphone was blocked."
+      return
+    }
+    stream = audio = analyser = null
+  }
+  starting = false
   running = true
   document.body.classList.add("live")
   lamp.textContent = "On air"
   go.textContent = "Stop"
-  heardEl.textContent = game === "dino" ? "Hold the sound to stay up" : game === "flap" ? "Hold the sound to rise" : "Louder lifts the balloon"
+  heardEl.textContent = look === "vox"
+    ? (game === "dino" ? "Hold a sound, Space, or the mouse" : game === "flap" ? "Hold a sound, Space, or the mouse to rise" : "Sound, Space, or the mouse lifts it")
+    : (game === "dino" ? "Hold the sound to stay up" : game === "flap" ? "Hold the sound to rise" : "Louder lifts the balloon")
   score = 0
   left = 30
   y = game === "dino" ? LINE - 22 : game === "flap" ? 180 : H / 2
@@ -335,6 +356,33 @@ go.addEventListener("click", () => {
   if (running) { endRound("Stopped."); return }
   start()
 })
+function pointerAmount(e) {
+  const r = canvas.getBoundingClientRect()
+  return Math.max(0, Math.min(1, 1 - (e.clientY - r.top) / Math.max(1, r.height)))
+}
+if (look === "vox") {
+  canvas.style.cursor = "pointer"
+  window.addEventListener("keydown", (e) => {
+    if (e.repeat) return
+    if (e.code !== "Space" && e.code !== "ArrowUp") return
+    e.preventDefault()
+    keyLift = true
+    if (!running) start()
+  })
+  window.addEventListener("keyup", (e) => {
+    if (e.code === "Space" || e.code === "ArrowUp") keyLift = false
+  })
+  canvas.addEventListener("pointerdown", (e) => {
+    pointerDown = true
+    pointerLift = pointerAmount(e)
+    try { canvas.setPointerCapture(e.pointerId) } catch (err) {}
+    if (!running) start()
+  })
+  canvas.addEventListener("pointermove", (e) => {
+    if (pointerDown) pointerLift = pointerAmount(e)
+  })
+  window.addEventListener("pointerup", () => { pointerDown = false })
+}
 if (game === "flap" && look !== "vox") canvas.style.imageRendering = "pixelated"
 if (game === "dino") {
   stones = [{ x: 560, w: 48, h: 64, scored: false }, { x: 760, w: 36, h: 90, scored: false }]

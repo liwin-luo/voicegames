@@ -17,12 +17,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dino 3D — Shout to Jump | Voicegames">
 <meta name="twitter:description" content="Dino 3D is a free 30-second voice game. Hold a sound and a block dinosaur stays up. Go quiet and it falls. Volume stays on your device.">
-<meta name="theme-color" content="#140e0c">
+<meta name="theme-color" content="#1a1410">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,560&family=Newsreader:opsz,wght@6..72,400;6..72,550&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,8 +49,8 @@
   <div class="stage play">
     <p class="kicker" id="kicker">Hold the sound</p>
     <h1>Dino 3D</h1>
-    <canvas id="world" class="world" width="800" height="360" aria-label="A block dinosaur running toward stones"></canvas>
-    <p class="heard" id="heard">Keep the sound going and the dinosaur stays up.</p>
+    <canvas id="world" class="world" width="800" height="480" aria-label="A block dinosaur running toward stones"></canvas>
+    <p class="heard" id="heard">Hold a sound, Space, or the mouse button. The dinosaur stays up.</p>
     <div class="meters">
       <div class="stat"><b id="score">0</b><span>passed</span></div>
       <div class="clock" aria-hidden="true">
@@ -63,8 +63,8 @@
 </section>
 <article>
   <h2>How to play Dino 3D</h2>
-  <p>Press Start and allow the microphone. The dinosaur runs toward stones. Hold a sound and it rises, then stays up. Go quiet and it falls. Each stone you clear adds one. Touch a stone and the round ends. You have 30 seconds.</p>
-  <p>You look down the track from behind the dinosaur. Stones stand on the path and come toward you. Dino 3D measures volume in the page. It does not send audio to a speech service and it does not keep a recording.</p>
+  <p>Press Start. Hold a sound, the Space bar, or the mouse button on the picture and the dinosaur stays up. Let go and it falls. Each stone you clear adds one. Touch a stone and the round ends. You have 30 seconds. Space also starts the round. The picture still works if the microphone is blocked.</p>
+  <p>You see the dinosaur from the side. Stones come in from the right. Dino 3D measures volume in the page. It does not send audio to a speech service and it does not keep a recording.</p>
 </article>
 <nav class="more" aria-label="Other games">
   <h2>Other games</h2>
@@ -79,7 +79,7 @@
   <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
   <p>© 2026 Voicegames</p>
 </footer>
-<script src="/js/vox.js"></script>
+<script src="/js/vox.js?v=side"></script>
 <script src="/js/world.js"></script>
 </body>
 </html>

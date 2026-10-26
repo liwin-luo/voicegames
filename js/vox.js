@@ -1,19 +1,17 @@
 const Vox = (() => {
   // ponytail: one draw call per box. Ceiling is a few hundred boxes; batch into one buffer if a frame drops.
   const SCALE = .12
-  const ZSCALE = .22
-  const CREAM = "#f4e7d4"
-  const GOLD = "#e7a35a"
-  const INK = "#140e0c"
-  const STONE = "#3a2922"
-  const BARK = "#4a3024"
+  const CREAM = "#fff6ea"
+  const GOLD = "#f0b15a"
+  const INK = "#24160f"
+  const HIDE = "#e15a2b"
+  const LEAF = "#3c9a46"
   const RED = "#ff4d3a"
-  const EYE = [-16, 13, -18]
-  const AT = [1, 5, 32]
-  const FLAP_EYE = [0, 24, -14]
-  const FLAP_AT = [0, 18, 46]
-  const FLOAT_EYE = [0, 30, -22]
-  const FLOAT_AT = [0, 16, 58]
+  const FOVY = 0.85
+  const ALONG = 0.16
+  // Side view. Travel runs along X; the eye sits across a thin strip of depth.
+  const EYE = [8, 14, 58]
+  const AT = [28, 16, 0]
 
   const batch = []
   function rgb(hex) {
@@ -24,7 +22,7 @@ const Vox = (() => {
     const c = rgb(color)
     batch.push(x, y, z, sx, sy, sz, c[0], c[1], c[2])
   }
-  function trackZ(gameX, anchor) { return 8 + (gameX - anchor) * ZSCALE }
+  function along(gameX, anchor) { return (gameX - anchor) * ALONG }
 
   function perspective(fovy, aspect, near, far) {
     const f = 1 / Math.tan(fovy / 2)
@@ -79,11 +77,11 @@ const Vox = (() => {
     return [c[0] / c[3], c[1] / c[3], c[3]]
   }
 
-  const VP = mul(perspective(0.9, 800 / 360, 0.5, 280), lookAt(EYE, AT, [0, 1, 0]))
+  const VP = mul(perspective(FOVY, 800 / 480, 0.4, 220), lookAt(EYE, AT, [0, 1, 0]))
   const look = norm([AT[0] - EYE[0], AT[1] - EYE[1], AT[2] - EYE[2]])
   const side = norm(cross(look, [0, 1, 0]))
-  const feet = ndc(VP, 0, 0, 24)
-  const head = ndc(VP, 0, 12, 24)
+  const feet = ndc(VP, 2, 1, 0)
+  const head = ndc(VP, 6, 12, 0)
   const nearX = ndc(VP, EYE[0] + look[0] * 12 + side[0] * 4, EYE[1] + look[1] * 12, EYE[2] + look[2] * 12)
   const farX = ndc(VP, EYE[0] + look[0] * 70 + side[0] * 4, EYE[1] + look[1] * 70, EYE[2] + look[2] * 70)
   const toRight = ndc(VP, AT[0] + side[0] * 6, AT[1], AT[2] + side[2] * 6)
@@ -96,98 +94,106 @@ const Vox = (() => {
   const gapBot = (330 - 220) * SCALE
   const mothY = (330 - 170) * SCALE
   if (!(mothY > gapBot && mothY < gapTop)) throw new Error("gap")
-  const flapVP = mul(perspective(0.9, 800 / 360, 0.5, 280), lookAt(FLAP_EYE, FLAP_AT, [0, 1, 0]))
-  const mothN = ndc(flapVP, 0, mothY, 6)
-  if (!(Math.abs(mothN[0]) < 0.35 && Math.abs(mothN[1]) < 0.45)) throw new Error("moth frame")
+  const mothN = ndc(VP, 2, mothY, 0)
+  if (!(mothN[0] < -0.05 && mothN[0] > -0.85 && Math.abs(mothN[1]) < 0.55)) throw new Error("moth frame")
+  const jumpHead = ndc(VP, 6, (308 - 22 - 78) * SCALE + 8, 0)
+  if (!(jumpHead[1] < 0.9 && jumpHead[1] > head[1])) throw new Error("jump frame")
 
+  function profile(x, y, z, sx, sy, sz, color) {
+    box(z, y, -(x + sx), sz, sy, sx, color)
+  }
   function ground(drift) {
-    const G = 10
-    const shift = ((drift * ZSCALE) % G + G) % G
-    for (let x = -40; x <= 30; x += G) {
-      for (let z = -8 - shift; z <= 190; z += G) {
-        const cx = x + G / 2
-        const road = cx > -14 && cx < 14
-        const cell = Math.floor(x / G) + Math.floor((z + shift) / G)
-        const lane = road && Math.abs(cx) < 1.5 && (Math.floor((z + shift) / G) % 2 === 0)
-        const color = lane ? GOLD : road ? (cell & 1 ? "#2a1c16" : "#1a1210") : "#100c0a"
-        box(x, -0.5, z, G - 0.2, 0.5, G - 0.2, color)
+    const G = 8
+    const shift = ((drift * ALONG) % G + G) % G
+    for (let x = -28; x <= 120; x += G) {
+      for (let z = -8; z <= 4; z += G) {
+        const cell = Math.floor((x + shift) / G) + Math.floor(z / G)
+        const lane = z > -4 && (Math.floor((x + shift) / G) % 2 === 0)
+        const color = lane ? (cell & 1 ? "#e8c27a" : "#f3d7a4") : "#c9844a"
+        box(x - shift, -0.5, z, G - 0.3, 0.5, G - 0.3, color)
       }
     }
   }
   function moon() {
     for (let dy = -2; dy <= 2; dy++) {
       for (let dx = -2; dx <= 2; dx++) {
-        if (dx * dx + dy * dy <= 5) box(22 + dx * 1.4, 26 + dy * 1.4, 150, 1.4, 1.4, 1.4, GOLD)
+        if (dx * dx + dy * dy <= 5) box(78 + dx * 1.5, 30 + dy * 1.5, -10, 1.5, 1.5, 1.5, "#ffd15a")
       }
     }
+  }
+  function blob(x) {
+    box(x, 0.06, -1.4, 7.5, 0.14, 3.4, "#b47848")
   }
   function dino(lift, pace) {
     const y = lift
     const step = Math.sin(pace) * 1.15
-    box(-2.3, y + 2.5, -1.2, 4.6, 3.3, 7.4, CREAM)
-    box(-1.6, y + 4.5, 5.2, 3.2, 2.5, 2.2, CREAM)
-    box(-1.8, y + 5.5, 6.8, 3.6, 2.5, 3.2, CREAM)
-    box(-1.15, y + 5.6, 9.6, 2.3, 1.35, 1.7, GOLD)
-    box(-2.2, y + 6.5, 8.1, 0.42, 0.5, 0.55, INK)
-    box(-0.7, y + 3.5, -4.4, 1.4, 1.25, 3.5, CREAM)
-    box(-1.9, y + Math.max(0, step), 3.8, 1.3, 2.6, 1.3, GOLD)
-    box(0.55, y + Math.max(0, -step), 3.8, 1.3, 2.6, 1.3, GOLD)
-    box(-1.9, y + Math.max(0, -step), -0.2, 1.3, 2.6, 1.3, GOLD)
-    box(0.55, y + Math.max(0, step), -0.2, 1.3, 2.6, 1.3, GOLD)
+    blob(1)
+    profile(-2.3, y + 2.5, -1.2, 4.6, 3.3, 7.4, HIDE)
+    profile(-1.1, y + 2.2, 0.4, 2.2, 1.6, 4.2, CREAM)
+    profile(-1.6, y + 4.5, 5.2, 3.2, 2.5, 2.2, HIDE)
+    profile(-1.8, y + 5.5, 6.8, 3.6, 2.5, 3.2, HIDE)
+    profile(-1.15, y + 5.6, 9.6, 2.3, 1.35, 1.7, "#f08a3a")
+    profile(-2.2, y + 6.5, 8.1, 0.42, 0.5, 0.55, CREAM)
+    profile(-2.05, y + 6.55, 8.55, 0.18, 0.22, 0.2, INK)
+    profile(-0.7, y + 3.5, -4.4, 1.4, 1.25, 3.5, "#c44722")
+    profile(-1.9, y + Math.max(0, step), 3.8, 1.3, 2.6, 1.3, "#c44722")
+    profile(0.55, y + Math.max(0, -step), 3.8, 1.3, 2.6, 1.3, "#c44722")
+    profile(-1.9, y + Math.max(0, -step), -0.2, 1.3, 2.6, 1.3, "#c44722")
+    profile(0.55, y + Math.max(0, step), -0.2, 1.3, 2.6, 1.3, "#c44722")
   }
   function moth(y, pace) {
     const up = Math.sin(pace) > 0
-    const wy = up ? y + 1.5 : y - 0.35
-    box(-0.7, y - 0.55, -1.4, 1.4, 1.25, 4.4, CREAM)
-    box(-0.45, y + 0.15, 2.6, 0.9, 0.8, 1.3, "#c4843a")
-    box(-0.25, y - 0.05, 3.6, 0.5, 0.4, 0.8, RED)
-    box(-5.4, wy, -0.2, 4.6, 0.28, 2.6, GOLD)
-    box(0.8, wy, -0.2, 4.6, 0.28, 2.6, GOLD)
+    const wy = y + (up ? 2.4 : -0.5)
+    blob(1.5)
+    box(-0.6, y - 0.7, -1.1, 5.4, 3.2, 2.2, CREAM)
+    box(4.2, y + 0.2, -0.75, 2.1, 1.8, 1.6, "#c4843a")
+    box(6.0, y + 0.45, -0.35, 1.15, 0.7, 0.8, RED)
+    box(0.3, wy, -0.35, 4.4, 0.42, 3.0, "#f08a3a")
+    box(0.8, wy + 0.2, 0.35, 3.6, 0.32, 2.2, "#7ec8ea")
   }
   function balloon(y) {
-    const z0 = 12
-    const bands = [[2.4, 1.05], [3.3, 1.25], [3.7, 1.35], [3.2, 1.2], [2.1, 0.95]]
-    let yy = y - 1.8
-    for (const [rx, h] of bands) {
-      box(-rx, yy, z0 - rx * 0.72, rx * 2, h, rx * 1.45, CREAM)
-      yy += h * 0.8
+    const x0 = 3
+    const bands = [[2.2, 1.15, "#e25c2a"], [3.0, 1.35, "#f6d7a8"], [3.4, 1.45, "#ffd15a"], [2.9, 1.3, "#e25c2a"], [1.9, 1.05, "#f6d7a8"]]
+    blob(1.2)
+    let yy = y - 2.2
+    for (const [rx, h, color] of bands) {
+      box(x0 - rx * 0.15, yy, -rx * 0.45, rx * 1.15, h, rx * 0.9, color)
+      yy += h * 0.82
     }
-    box(-0.12, y - 3.3, z0, 0.24, 1.7, 0.24, GOLD)
-    box(-1.05, y - 4.5, z0 - 0.4, 2.1, 1.15, 1.5, GOLD)
+    box(x0, y - 3.6, -0.15, 0.28, 1.8, 0.28, GOLD)
+    box(x0 - 0.9, y - 4.7, -0.7, 2.1, 1.15, 1.5, GOLD)
   }
   function stack(s, anchor) {
-    const z = trackZ(s.x, anchor)
-    if (z < -6 || z > 210) return
+    const x = along(s.x, anchor)
+    if (x < -24 || x > 120) return
     const h = Math.max(4, s.h * 0.28)
-    const w = Math.max(3.4, s.w * 0.11)
-    const d = Math.max(3, w * 0.7)
-    box(-w / 2, 0, z, w, h, d, STONE)
-    box(-w / 2 - 0.2, h - 0.6, z - 0.15, w + 0.4, 0.75, d + 0.3, GOLD)
+    const w = Math.max(2.4, s.w * 0.07)
+    box(x, 0, -w * 0.35, w, h, w * 0.7, LEAF)
+    box(x - w * 0.15, h * 0.42, -w * 0.2, w * 0.45, h * 0.36, w * 0.5, "#2f8a40")
+    box(x + w * 0.45, h * 0.28, -w * 0.15, w * 0.4, h * 0.3, w * 0.45, "#8fd18a")
   }
   function gate(g, groundY, anchor) {
-    const z = trackZ(g.x, anchor)
-    if (z < -6 || z > 210) return
+    const x = along(g.x, anchor)
+    if (x < -24 || x > 120) return
     const openTop = (groundY - g.gap) * SCALE
     const openBot = (groundY - (g.gap + 120)) * SCALE
     const top = groundY * SCALE
-    const span = 28
-    const thick = 3.4
-    box(-span / 2, 0, z, span, Math.max(0.2, openBot), thick, BARK)
-    box(-span / 2, openTop, z, span, Math.max(0.2, top - openTop), thick, BARK)
-    box(-span / 2 - 0.4, Math.max(0, openBot - 0.55), z - 0.25, span + 0.8, 0.7, thick + 0.5, GOLD)
-    box(-span / 2 - 0.4, openTop, z - 0.25, span + 0.8, 0.7, thick + 0.5, GOLD)
+    const thick = 5.5
+    const depth = 2.4
+    box(x, 0, -depth / 2, thick, Math.max(0.2, openBot), depth, "#d86a3a")
+    box(x, openTop, -depth / 2, thick, Math.max(0.2, top - openTop), depth, "#d86a3a")
+    box(x - 0.15, Math.max(0, openBot - 0.55), -depth / 2 - 0.15, thick + 0.3, 0.7, depth + 0.3, GOLD)
+    box(x - 0.15, openTop, -depth / 2 - 0.15, thick + 0.3, 0.7, depth + 0.3, GOLD)
   }
   function ring(hole) {
-    const z = trackZ(hole.x, 170)
-    if (z < -6 || z > 210) return
+    const x = along(hole.x, 170)
+    if (x < -24 || x > 120) return
     const cy = (360 - hole.hy) * SCALE
     const hr = hole.hr * SCALE
-    const n = 28
+    const n = 22
     for (let i = 0; i < n; i++) {
       const a = (i / n) * Math.PI * 2
-      const x = Math.cos(a) * hr
-      const y = cy + Math.sin(a) * hr
-      box(x - 0.75, y - 0.75, z, 1.5, 1.5, 2.4, GOLD)
+      box(x + Math.cos(a) * hr - 0.7, cy + Math.sin(a) * hr - 0.7, -0.6, 1.4, 1.4, 1.6, i % 2 ? "#ffd15a" : "#e25c2a")
     }
   }
 
@@ -203,19 +209,19 @@ varying float vZ;
 void main() {
   vec3 p = uOff + aPos * uSize;
   gl_Position = uVP * vec4(p, 1.0);
-  float key = max(0.0, dot(aNrm, normalize(vec3(-0.35, 0.75, 0.45))));
-  float fill = max(0.0, dot(aNrm, normalize(vec3(0.1, 0.2, -0.9))));
-  float lam = min(1.0, 0.26 + 0.48 * key + 0.4 * fill);
+  float key = max(0.0, dot(aNrm, normalize(vec3(-0.35, 0.85, 0.4))));
+  float fill = max(0.0, dot(aNrm, normalize(vec3(0.2, 0.35, -0.85))));
+  float lam = min(1.15, 0.62 + 0.4 * key + 0.28 * fill);
   vCol = uColor * lam;
-  vZ = p.z;
+  vZ = p.x;
 }`
   const BOX_FS = `
 precision mediump float;
 varying vec3 vCol;
 varying float vZ;
 void main() {
-  float fog = clamp((vZ - 28.0) / 150.0, 0.0, 1.0);
-  vec3 haze = vec3(0.22, 0.13, 0.09);
+  float fog = clamp((vZ - 78.0) / 70.0, 0.0, 0.35);
+  vec3 haze = vec3(0.53, 0.78, 0.92);
   gl_FragColor = vec4(mix(vCol, haze, fog), 1.0);
 }`
   const SKY_VS = `attribute vec2 a; varying vec2 v; void main(){ v = a; gl_Position = vec4(a, 1.0, 1.0); }`
@@ -224,9 +230,9 @@ precision mediump float;
 varying vec2 v;
 void main() {
   float t = v.y * 0.5 + 0.5;
-  vec3 hor = vec3(0.29, 0.16, 0.10);
-  vec3 top = vec3(0.07, 0.045, 0.038);
-  gl_FragColor = vec4(mix(hor, top, smoothstep(0.25, 0.95, t)), 1.0);
+  vec3 hor = vec3(0.97, 0.78, 0.55);
+  vec3 top = vec3(0.35, 0.74, 0.93);
+  gl_FragColor = vec4(mix(hor, top, smoothstep(0.05, 0.72, t)), 1.0);
 }`
 
   let gl, glCanvas, boxProg, skyProg, uVP, uOff, uSize, uColor
@@ -308,7 +314,7 @@ void main() {
       glCanvas.height = ph
     }
     gl.viewport(0, 0, pw, ph)
-    gl.clearColor(0.07, 0.045, 0.038, 1)
+    gl.clearColor(0.45, 0.76, 0.93, 1)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
     gl.disable(gl.DEPTH_TEST)
     gl.useProgram(skyProg)
@@ -327,7 +333,7 @@ void main() {
     gl.vertexAttribPointer(pos, 3, gl.FLOAT, false, stride, 0)
     gl.enableVertexAttribArray(nrm)
     gl.vertexAttribPointer(nrm, 3, gl.FLOAT, false, stride, 12)
-    const vp = mul(perspective(0.9, pw / ph, 0.5, 280), lookAt(eye, at, [0, 1, 0]))
+    const vp = mul(perspective(FOVY, pw / ph, 0.4, 220), lookAt(eye, at, [0, 1, 0]))
     gl.uniformMatrix4fv(uVP, false, vp)
     for (let i = 0; i < batch.length; i += 9) {
       gl.uniform3f(uOff, batch[i], batch[i + 1], batch[i + 2])
@@ -345,21 +351,21 @@ void main() {
     moon()
     for (const s of view.stones) stack(s, 150)
     dino(Math.max(0, (view.LINE - 22 - view.y) * SCALE), view.pace)
-    paint(ctx, view.W, view.H, EYE, AT)
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT)
   }
   function flap(ctx, view) {
     ground(view.drift)
     moon()
     for (const g of view.gates) gate(g, view.GROUND, view.BX)
     moth((view.GROUND - view.y) * SCALE, view.pace)
-    paint(ctx, view.W, view.H, FLAP_EYE, FLAP_AT)
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT)
   }
   function float(ctx, view) {
     ground(0)
     moon()
     for (const hole of view.holes) ring(hole)
     balloon((360 - view.y) * SCALE)
-    paint(ctx, view.W, view.H, FLOAT_EYE, FLOAT_AT)
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT)
   }
   return { hop, flap, float }
 })()

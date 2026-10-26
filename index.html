@@ -17,12 +17,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Voice Games Online — Play Out Loud | Voicegames">
 <meta name="twitter:description" content="Play free voice games in the browser. Say a word, read a line, or steer a picture with your volume. No account and no download.">
-<meta name="theme-color" content="#140e0c">
+<meta name="theme-color" content="#1a1410">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,560&family=Newsreader:opsz,wght@6..72,400;6..72,550&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,18 +38,18 @@
       "@type": "ItemList",
       "name": "Voice games",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Say it", "url": "https://voicegames.org/say" },
-        { "@type": "ListItem", "position": 2, "name": "Count", "url": "https://voicegames.org/count" },
-        { "@type": "ListItem", "position": 3, "name": "Repeat", "url": "https://voicegames.org/repeat" },
-        { "@type": "ListItem", "position": 4, "name": "Louder", "url": "https://voicegames.org/louder" },
-        { "@type": "ListItem", "position": 5, "name": "Voice Over", "url": "https://voicegames.org/voice-over" },
-        { "@type": "ListItem", "position": 6, "name": "Voice Acting", "url": "https://voicegames.org/voice-acting" },
-        { "@type": "ListItem", "position": 7, "name": "Dino", "url": "https://voicegames.org/dino" },
-        { "@type": "ListItem", "position": 8, "name": "Flap", "url": "https://voicegames.org/flap" },
-        { "@type": "ListItem", "position": 9, "name": "Float", "url": "https://voicegames.org/float" },
-        { "@type": "ListItem", "position": 10, "name": "Dino 3D", "url": "https://voicegames.org/3d/dino" },
-        { "@type": "ListItem", "position": 11, "name": "Flap 3D", "url": "https://voicegames.org/3d/flap" },
-        { "@type": "ListItem", "position": 12, "name": "Float 3D", "url": "https://voicegames.org/3d/float" },
+        { "@type": "ListItem", "position": 1, "name": "Dino 3D", "url": "https://voicegames.org/3d/dino" },
+        { "@type": "ListItem", "position": 2, "name": "Flap 3D", "url": "https://voicegames.org/3d/flap" },
+        { "@type": "ListItem", "position": 3, "name": "Float 3D", "url": "https://voicegames.org/3d/float" },
+        { "@type": "ListItem", "position": 4, "name": "Say it", "url": "https://voicegames.org/say" },
+        { "@type": "ListItem", "position": 5, "name": "Count", "url": "https://voicegames.org/count" },
+        { "@type": "ListItem", "position": 6, "name": "Repeat", "url": "https://voicegames.org/repeat" },
+        { "@type": "ListItem", "position": 7, "name": "Louder", "url": "https://voicegames.org/louder" },
+        { "@type": "ListItem", "position": 8, "name": "Voice Over", "url": "https://voicegames.org/voice-over" },
+        { "@type": "ListItem", "position": 9, "name": "Voice Acting", "url": "https://voicegames.org/voice-acting" },
+        { "@type": "ListItem", "position": 10, "name": "Dino", "url": "https://voicegames.org/dino" },
+        { "@type": "ListItem", "position": 11, "name": "Flap", "url": "https://voicegames.org/flap" },
+        { "@type": "ListItem", "position": 12, "name": "Float", "url": "https://voicegames.org/float" },
         { "@type": "ListItem", "position": 13, "name": "Voice Over Game", "url": "https://voicegames.org/voice-over-game" }
       ]
     }
@@ -67,26 +67,50 @@
   <div class="stage">
     <p class="kicker">Play out loud</p>
     <h1>Voicegames</h1>
-    <nav class="menu" aria-label="Games">
-      <a href="/say"><strong>Say it</strong><small>Say the word</small></a>
-      <a href="/count"><strong>Count</strong><small>Say the next number</small></a>
-      <a href="/repeat"><strong>Repeat</strong><small>Say the whole line</small></a>
-      <a href="/louder"><strong>Louder</strong><small>Stay loud</small></a>
-      <a href="/voice-over"><strong>Voice over</strong><small>Read the line</small></a>
-      <a href="/voice-acting"><strong>Voice acting</strong><small>Say it in a mood</small></a>
-      <a href="/dino"><strong>Dino</strong><small>Shout to jump</small></a>
-      <a href="/flap"><strong>Flap</strong><small>Hold to rise</small></a>
-      <a href="/float"><strong>Float</strong><small>Steer through the hole</small></a>
-      <p class="kicker">3D</p>
-      <a href="/3d/dino"><strong>Dino 3D</strong><small>Shout to jump</small></a>
-      <a href="/3d/flap"><strong>Flap 3D</strong><small>Hold to rise</small></a>
-      <a href="/3d/float"><strong>Float 3D</strong><small>Steer through the hole</small></a>
+    <p class="lede">Three block tracks. Hold a sound, Space, or the mouse.</p>
+    <nav class="arcade" aria-label="Main games">
+      <a class="play-tile feature" href="/3d/dino">
+        <span class="diorama dino" aria-hidden="true"><i class="sprite"></i><i class="sprite cactus"></i></span>
+        <span class="tag">01</span>
+        <strong>Dino 3D</strong>
+        <small>Hold to stay up</small>
+      </a>
+      <a class="play-tile" href="/3d/flap">
+        <span class="diorama flap" aria-hidden="true"><i class="sprite"></i></span>
+        <span class="tag">02</span>
+        <strong>Flap 3D</strong>
+        <small>Hold to rise</small>
+      </a>
+      <a class="play-tile" href="/3d/float">
+        <span class="diorama float" aria-hidden="true"><i class="sprite"></i></span>
+        <span class="tag">03</span>
+        <strong>Float 3D</strong>
+        <small>Steer through the ring</small>
+      </a>
     </nav>
   </div>
 </section>
+<section class="shelf" aria-label="More games">
+  <h2>Say a line</h2>
+  <div class="shelf-row">
+    <a href="/say"><strong>Say it</strong><small>Say the word</small></a>
+    <a href="/count"><strong>Count</strong><small>Next number</small></a>
+    <a href="/repeat"><strong>Repeat</strong><small>The whole line</small></a>
+    <a href="/louder"><strong>Louder</strong><small>Stay loud</small></a>
+    <a href="/voice-over"><strong>Voice over</strong><small>Read the line</small></a>
+    <a href="/voice-acting"><strong>Voice acting</strong><small>Say a mood</small></a>
+    <a href="/voice-over-game"><strong>Voice over game</strong><small>Choicer Voicer</small></a>
+  </div>
+  <h2>Flat pictures</h2>
+  <div class="shelf-row">
+    <a href="/dino"><strong>Dino</strong><small>Same rules, flat</small></a>
+    <a href="/flap"><strong>Flap</strong><small>Same rules, flat</small></a>
+    <a href="/float"><strong>Float</strong><small>Same rules, flat</small></a>
+  </div>
+</section>
 <article>
-  <h2>Twelve voice games</h2>
-  <p>Each game is one round in the browser. You need a microphone and, for the speaking games, desktop Chrome. Nothing is stored on this site.</p>
+  <h2>The games</h2>
+  <p>Dino 3D, Flap 3D, and Float 3D are the main rounds. Each one lasts 30 seconds. Sound, the Space bar, and the mouse all work, and the picture still runs if the microphone is blocked. The speaking games need a microphone and desktop Chrome. Nothing is stored on this site.</p>
   <p><a href="/say">Say it</a> shows one word at a time. Say it and the next word appears. The round lasts 60 seconds.</p>
   <p><a href="/count">Count</a> starts at one. Say each number as it appears, up to thirty, or until the minute ends.</p>
   <p><a href="/repeat">Repeat</a> shows a two-word line. Say both words and the next line appears.</p>
@@ -94,7 +118,7 @@
   <p><a href="/dino">Dino</a> is a picture. Hold a sound and the dinosaur stays up. Go quiet and it falls. A hit ends the round. You have 30 seconds.</p>
   <p><a href="/flap">Flap</a> is a picture. Hold a sound and a pixel moth rises through the gaps. Go quiet and it falls. A hit ends the round. You have 30 seconds.</p>
   <p><a href="/float">Float</a> is a picture. Volume lifts a balloon. Quiet lets it fall. Pass through each round hole. A hit ends the round. You have 30 seconds.</p>
-  <p><a href="/3d/dino">Dino 3D</a>, <a href="/3d/flap">Flap 3D</a>, and <a href="/3d/float">Float 3D</a> use those same rules. You look down the track from behind the character. Stones, gaps, and rings stand on the path and come toward you.</p>
+  <p><a href="/3d/dino">Dino 3D</a>, <a href="/3d/flap">Flap 3D</a>, and <a href="/3d/float">Float 3D</a> use those same rules, seen from the side. Hold a sound, Space, or the mouse. Stones, gaps, and rings come in from the right.</p>
   <p><a href="/voice-over">Voice over</a> shows a short narration line. Read the whole line and the next one appears. The round lasts 60 seconds.</p>
   <p><a href="/voice-over-game">Voice over game</a> embeds Choicer Voicer. The how-to is on that page. Play opens their studio.</p>
   <p><a href="/voice-acting">Voice acting</a> shows a mood and an original line. Say the line. The mood is there to play in, and the score counts the words only. The round lasts 60 seconds.</p>
