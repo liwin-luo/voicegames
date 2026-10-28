@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bricks — Break the Wall with Your Voice | Voicegames</title>
+<meta name="description" content="Bricks is a free 30-second voice game. Hum to slide the paddle, shout or press Space to launch the ball, and break as many bricks as you can. Nothing is recorded.">
+<meta name="keywords" content="voice game, microphone game, browser game, bricks, break the wall with your voice">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/bricks">
+<meta property="og:title" content="Bricks — Break the Wall with Your Voice | Voicegames">
+<meta property="og:description" content="Bricks is a free 30-second voice game. Hum to slide the paddle, shout or press Space to launch the ball, and break as many bricks as you can. Nothing is recorded.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://voicegames.org/bricks">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/bricks.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Bricks — Break the Wall with Your Voice | Voicegames">
+<meta name="twitter:description" content="Bricks is a free 30-second voice game. Hum to slide the paddle, shout or press Space to launch the ball, and break as many bricks as you can. Nothing is recorded.">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/bricks">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/bricks">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/bricks">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/bricks">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/bricks">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/bricks">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/bricks">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/bricks">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/bricks">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/bricks">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/bricks">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Bricks","url":"https://voicegames.org/bricks","description":"Bricks is a free 30-second voice game. Hum to slide the paddle, shout or press Space to launch the ball, and break as many bricks as you can. Nothing is recorded.","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Bricks free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every game on Voicegames is free, with no account and no download. Open the page and play."}},{"@type":"Question","name":"Where does Bricks work?","acceptedAnswer":{"@type":"Answer","text":"It runs in any modern browser, on desktop and mobile. Space and the mouse also control the game, so it works even if the microphone is blocked."}},{"@type":"Question","name":"Is my voice recorded?","acceptedAnswer":{"@type":"Answer","text":"No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio."}},{"@type":"Question","name":"Why does the ball need relaunching?","acceptedAnswer":{"@type":"Answer","text":"The shout is your serve. When the ball drops past the paddle, slide to a smart spot and shout again — launching well is part of the score."}},{"@type":"Question","name":"Which bricks pay most?","acceptedAnswer":{"@type":"Answer","text":"The two top gold rows pay 3 each, the two middle rows pay 2, and the bottom row pays 1 — keep the ball high."}}]}]}
+</script>
+</head>
+<body data-game="bricks">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/">All games</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+<details class="lang">
+  <summary aria-label="Language">EN</summary>
+  <div class="lang-menu"><a href="/bricks" hreflang="en" aria-current="true">English</a><a href="/zh/bricks" hreflang="zh-CN">简体中文</a><a href="/es/bricks" hreflang="es">Español</a><a href="/ja/bricks" hreflang="ja">日本語</a><a href="/pt/bricks" hreflang="pt-BR">Português</a><a href="/fr/bricks" hreflang="fr">Français</a><a href="/de/bricks" hreflang="de">Deutsch</a><a href="/it/bricks" hreflang="it">Italiano</a><a href="/ko/bricks" hreflang="ko">한국어</a><a href="/ru/bricks" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">Slide the paddle, shout to launch</p>
+      <h1>Bricks</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Bricks"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>bricks</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">Start</button></div>
+      <p class="heard" id="heard">Slide the paddle. Shout, Space, or click launches the ball.</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>How to play Bricks</h2>
+  <ol>
+    <li>Press Start and allow the microphone.</li>
+    <li>Hum low or high to slide the paddle; the ball rides it until you launch.</li>
+    <li>Shout, press Space, or click to launch. Top gold rows pay 3, middle rows 2, bottom row 1.</li>
+    <li>If the ball drops, slide in and shout to serve again. You have 30 seconds.</li>
+  </ol>
+  <p>Bricks measures volume and pitch in the page. The audio never leaves your device and nothing is recorded. The wall, the paddle, and the ball are drawn here.</p>
+</article>
+<section class="faq">
+  <h2>Questions about Bricks</h2>
+  <h3>Is Bricks free?</h3>
+  <p>Yes. Every game on Voicegames is free, with no account and no download. Open the page and play.</p>
+  <h3>Where does Bricks work?</h3>
+  <p>It runs in any modern browser, on desktop and mobile. Space and the mouse also control the game, so it works even if the microphone is blocked.</p>
+  <h3>Is my voice recorded?</h3>
+  <p>No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio.</p>
+  <h3>Why does the ball need relaunching?</h3>
+  <p>The shout is your serve. When the ball drops past the paddle, slide to a smart spot and shout again — launching well is part of the score.</p>
+  <h3>Which bricks pay most?</h3>
+  <p>The two top gold rows pay 3 each, the two middle rows pay 2, and the bottom row pays 1 — keep the ball high.</p>
+</section>
+<nav class="more" aria-label="Other games">
+  <h2>Other games</h2>
+  <ul>
+    <li><a href="/catch">Catch</a> — Catch coins, dodge bombs</li>
+    <li><a href="/racer">Racer</a> — Voice-steered traffic dodge</li>
+    <li><a href="/miner">Miner</a> — Gold-rush claw timing</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames is an independent browser game site.</p>
+  <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-en.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/game-bricks.js?v=1"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

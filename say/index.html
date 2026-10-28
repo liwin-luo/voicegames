@@ -3,40 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Say It — Say the Word Out Loud | Voicegames</title>
+<title>Say it — Say the Word Out Loud | Voicegames</title>
 <meta name="description" content="Say It is a free one-minute voice game. A word appears, you say it, and the next word shows up. Play in desktop Chrome with a microphone.">
-<meta name="keywords" content="say the word, say it game, voice game, speak the word, microphone game">
+<meta name="keywords" content="voice game, microphone game, browser game, say it, say the word out loud">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://voicegames.org/say">
-<meta property="og:title" content="Say It — Say the Word Out Loud | Voicegames">
+<meta property="og:title" content="Say it — Say the Word Out Loud | Voicegames">
 <meta property="og:description" content="Say It is a free one-minute voice game. A word appears, you say it, and the next word shows up. Play in desktop Chrome with a microphone.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://voicegames.org/say">
 <meta property="og:site_name" content="Voicegames">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Say It — Say the Word Out Loud | Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/say.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Say it — Say the Word Out Loud | Voicegames">
 <meta name="twitter:description" content="Say It is a free one-minute voice game. A word appears, you say it, and the next word shows up. Play in desktop Chrome with a microphone.">
 <meta name="theme-color" content="#1a1410">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/say">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/say">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/say">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/say">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/say">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/say">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/say">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/say">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/say">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/say">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/say">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Say It",
-  "url": "https://voicegames.org/say",
-  "description": "Say the word on screen. A hit brings the next word. One minute.",
-  "playMode": "SinglePlayer",
-  "applicationCategory": "Game",
-  "operatingSystem": "Web",
-  "inLanguage": "en",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "isPartOf": { "@type": "WebSite", "name": "Voicegames", "url": "https://voicegames.org/" }
-}
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Say it","url":"https://voicegames.org/say","description":"Say It is a free one-minute voice game. A word appears, you say it, and the next word shows up. Play in desktop Chrome with a microphone.","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Say it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every game on Voicegames is free, with no account and no download. Open the page and play."}},{"@type":"Question","name":"Where does Say it work?","acceptedAnswer":{"@type":"Answer","text":"The speaking games need a microphone and desktop Chrome, on a computer. Chrome sends your audio to its speech service and shows the words on the page."}},{"@type":"Question","name":"Is my voice recorded?","acceptedAnswer":{"@type":"Answer","text":"No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio."}},{"@type":"Question","name":"Why is my word not counting?","acceptedAnswer":{"@type":"Answer","text":"Say the whole word clearly at normal volume. The bottom strip shows what Chrome heard — compare it with the word on screen and try again."}},{"@type":"Question","name":"Can I play Say It in other languages?","acceptedAnswer":{"@type":"Answer","text":"Yes — switch the site language in the top bar and the words change with it. Each version listens in its own language."}}]}]}
 </script>
 </head>
 <body data-game="say">
@@ -44,36 +46,58 @@
 <section class="booth">
   <div class="top">
     <a class="back" href="/">All games</a>
-    <div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+<details class="lang">
+  <summary aria-label="Language">EN</summary>
+  <div class="lang-menu"><a href="/say" hreflang="en" aria-current="true">English</a><a href="/zh/say" hreflang="zh-CN">简体中文</a><a href="/es/say" hreflang="es">Español</a><a href="/ja/say" hreflang="ja">日本語</a><a href="/pt/say" hreflang="pt-BR">Português</a><a href="/fr/say" hreflang="fr">Français</a><a href="/de/say" hreflang="de">Deutsch</a><a href="/it/say" hreflang="it">Italiano</a><a href="/ko/say" hreflang="ko">한국어</a><a href="/ru/say" hreflang="ru">Русский</a></div>
+</details></div>
   </div>
-  <div class="stage">
+  <div class="stage play">
     <p class="kicker" id="kicker">Say the word</p>
-    <h1 id="title">Say it</h1>
-    <p class="word" id="word" data-prompt="word" hidden></p>
-    <p class="heard" id="heard">A word appears. Say it.</p>
-    <div class="meters">
-      <div class="stat"><b id="score">0</b><span>correct</span></div>
-      <div class="clock" aria-hidden="true">
-        <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
-        <b id="time">60</b>
+    <div class="screen speak">
+      <h1 id="title"><span class="attract">Say the word out loud</span>Say it</h1>
+      <p class="word" id="word" data-prompt="word" hidden></p>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>correct</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">60</b>
+        </div>
       </div>
+      <div class="actions"><button id="go" type="button">Start</button></div>
+      <p class="heard" id="heard">A word appears. Say it.</p>
     </div>
-    <div class="actions"><button id="go" type="button">Start</button></div>
   </div>
 </section>
 <article>
-  <h2>How to play Say It</h2>
-  <p>Press Start and allow the microphone. One word fills the screen. Say that word clearly. When it matches, the score goes up and a new word appears. You have 60 seconds. Press Stop to end early, or Play again for another minute.</p>
+  <h2>How to play Say it</h2>
+  <ol>
+    <li>Press Start and allow the microphone.</li>
+    <li>One word fills the screen. Say that word clearly.</li>
+    <li>When it matches, the score goes up and a new word appears.</li>
+    <li>You have 60 seconds. Press Stop to end early.</li>
+  </ol>
   <p>Say It uses Chrome’s speech service to turn your voice into text. This page does not store the recording. Open it in desktop Chrome.</p>
 </article>
+<section class="faq">
+  <h2>Questions about Say it</h2>
+  <h3>Is Say it free?</h3>
+  <p>Yes. Every game on Voicegames is free, with no account and no download. Open the page and play.</p>
+  <h3>Where does Say it work?</h3>
+  <p>The speaking games need a microphone and desktop Chrome, on a computer. Chrome sends your audio to its speech service and shows the words on the page.</p>
+  <h3>Is my voice recorded?</h3>
+  <p>No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio.</p>
+  <h3>Why is my word not counting?</h3>
+  <p>Say the whole word clearly at normal volume. The bottom strip shows what Chrome heard — compare it with the word on screen and try again.</p>
+  <h3>Can I play Say It in other languages?</h3>
+  <p>Yes — switch the site language in the top bar and the words change with it. Each version listens in its own language.</p>
+</section>
 <nav class="more" aria-label="Other games">
   <h2>Other games</h2>
   <ul>
-    <li><a href="/count">Count</a> — say the next number</li>
-    <li><a href="/repeat">Repeat</a> — say the whole line</li>
-    <li><a href="/louder">Louder</a> — stay loud</li>
-    <li><a href="/voice-over">Voice over</a> — read the line</li>
-    <li><a href="/voice-acting">Voice acting</a> — say it in a mood</li>
+    <li><a href="/count">Count</a> — Climb from one to thirty</li>
+    <li><a href="/repeat">Repeat</a> — Say the whole line back</li>
+    <li><a href="/louder">Louder</a> — Score every loud second</li>
   </ul>
 </nav>
 <footer class="site-foot">
@@ -81,6 +105,9 @@
   <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
   <p>© 2026 Voicegames</p>
 </footer>
-<script src="/js/play.js"></script>
+<script src="/js/words-en.js?v=1"></script>
+<script src="/js/play.js?v=3"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
 </body>
 </html>

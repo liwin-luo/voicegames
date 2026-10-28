@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hop — Charge Your Voice, Leap the Gap | Voicegames</title>
+<meta name="description" content="Hop is a free 30-second voice game. Hold a sound to charge your leap, go quiet to jump — land on the next pillar and keep the charge under control. Nothing is recorded.">
+<meta name="keywords" content="voice game, microphone game, browser game, hop, charge your voice, leap the gap">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/hop">
+<meta property="og:title" content="Hop — Charge Your Voice, Leap the Gap | Voicegames">
+<meta property="og:description" content="Hop is a free 30-second voice game. Hold a sound to charge your leap, go quiet to jump — land on the next pillar and keep the charge under control. Nothing is recorded.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://voicegames.org/hop">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/hop.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Hop — Charge Your Voice, Leap the Gap | Voicegames">
+<meta name="twitter:description" content="Hop is a free 30-second voice game. Hold a sound to charge your leap, go quiet to jump — land on the next pillar and keep the charge under control. Nothing is recorded.">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/hop">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/hop">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/hop">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/hop">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/hop">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/hop">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/hop">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/hop">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/hop">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/hop">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/hop">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Hop","url":"https://voicegames.org/hop","description":"Hop is a free 30-second voice game. Hold a sound to charge your leap, go quiet to jump — land on the next pillar and keep the charge under control. Nothing is recorded.","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Hop free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every game on Voicegames is free, with no account and no download. Open the page and play."}},{"@type":"Question","name":"Where does Hop work?","acceptedAnswer":{"@type":"Answer","text":"It runs in any modern browser, on desktop and mobile. Space and the mouse also control the game, so it works even if the microphone is blocked."}},{"@type":"Question","name":"Is my voice recorded?","acceptedAnswer":{"@type":"Answer","text":"No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio."}},{"@type":"Question","name":"How do I judge the leap?","acceptedAnswer":{"@type":"Answer","text":"The number over the gap is its width, and the ring shows your charge — a full ring flies about four hundred pixels, so let go early for short gaps."}},{"@type":"Question","name":"Can I land back where I started?","acceptedAnswer":{"@type":"Answer","text":"Yes, safely — it just scores nothing. Only the far pillar pays."}}]}]}
+</script>
+</head>
+<body data-game="hop">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/">All games</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+<details class="lang">
+  <summary aria-label="Language">EN</summary>
+  <div class="lang-menu"><a href="/hop" hreflang="en" aria-current="true">English</a><a href="/zh/hop" hreflang="zh-CN">简体中文</a><a href="/es/hop" hreflang="es">Español</a><a href="/ja/hop" hreflang="ja">日本語</a><a href="/pt/hop" hreflang="pt-BR">Português</a><a href="/fr/hop" hreflang="fr">Français</a><a href="/de/hop" hreflang="de">Deutsch</a><a href="/it/hop" hreflang="it">Italiano</a><a href="/ko/hop" hreflang="ko">한국어</a><a href="/ru/hop" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">Hold to charge, quiet to leap</p>
+      <h1>Hop</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Hop"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>hops</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">Start</button></div>
+      <p class="heard" id="heard">Hold a sound to charge. Go quiet to jump.</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>How to play Hop</h2>
+  <ol>
+    <li>Press Start and allow the microphone.</li>
+    <li>Hold a sound and the charge ring fills — a full ring is a long leap.</li>
+    <li>Go quiet and the climber leaps toward the next pillar. Landing in its middle pays two.</li>
+    <li>Fall into the canyon and the round ends. You have 30 seconds.</li>
+  </ol>
+  <p>Hop measures volume in the page. It does not send audio to a speech service and it does not keep a recording. The pillars and the climber are drawn here.</p>
+</article>
+<section class="faq">
+  <h2>Questions about Hop</h2>
+  <h3>Is Hop free?</h3>
+  <p>Yes. Every game on Voicegames is free, with no account and no download. Open the page and play.</p>
+  <h3>Where does Hop work?</h3>
+  <p>It runs in any modern browser, on desktop and mobile. Space and the mouse also control the game, so it works even if the microphone is blocked.</p>
+  <h3>Is my voice recorded?</h3>
+  <p>No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio.</p>
+  <h3>How do I judge the leap?</h3>
+  <p>The number over the gap is its width, and the ring shows your charge — a full ring flies about four hundred pixels, so let go early for short gaps.</p>
+  <h3>Can I land back where I started?</h3>
+  <p>Yes, safely — it just scores nothing. Only the far pillar pays.</p>
+</section>
+<nav class="more" aria-label="Other games">
+  <h2>Other games</h2>
+  <ul>
+    <li><a href="/puff">Puff</a> — Blow it up, cash out in time</li>
+    <li><a href="/tug">Tug</a> — Rope duel against the machine</li>
+    <li><a href="/floors">Floors</a> — The descent classic, steered by pitch</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames is an independent browser game site.</p>
+  <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-en.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/game-hop.js?v=1"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

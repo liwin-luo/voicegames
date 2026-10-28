@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catch — 接住落金 | Voicegames</title>
+<meta name="description" content="接金币是一款免费的 30 秒声控游戏：低音左移、高音右移篮子，接住金币和宝石，躲开炸弹。不录任何音频。">
+<meta name="keywords" content="声音游戏,语音游戏,麦克风游戏,网页游戏,Catch,接住落金">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/zh/catch">
+<meta property="og:title" content="Catch — 接住落金 | Voicegames">
+<meta property="og:description" content="接金币是一款免费的 30 秒声控游戏：低音左移、高音右移篮子，接住金币和宝石，躲开炸弹。不录任何音频。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://voicegames.org/zh/catch">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/catch.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Catch — 接住落金 | Voicegames">
+<meta name="twitter:description" content="接金币是一款免费的 30 秒声控游戏：低音左移、高音右移篮子，接住金币和宝石，躲开炸弹。不录任何音频。">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/catch">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/catch">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/catch">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/catch">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/catch">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/catch">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/catch">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/catch">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/catch">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/catch">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/catch">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Catch","url":"https://voicegames.org/zh/catch","description":"接金币是一款免费的 30 秒声控游戏：低音左移、高音右移篮子，接住金币和宝石，躲开炸弹。不录任何音频。","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Catch免费吗？","acceptedAnswer":{"@type":"Answer","text":"免费。Voicegames 上的所有游戏都不要钱，无需注册、无需下载，打开页面就能玩。"}},{"@type":"Question","name":"Catch在哪些设备上能玩？","acceptedAnswer":{"@type":"Answer","text":"任何现代浏览器都能玩，桌面和手机都支持。空格键和鼠标同样可以控制游戏，即使麦克风被拒绝也能玩。"}},{"@type":"Question","name":"我的声音会被录音吗？","acceptedAnswer":{"@type":"Answer","text":"不会。音量类游戏只在页面内测量响度，不保存任何音频；说话类游戏使用 Chrome 内置语音服务把语音转成屏幕上的文字，Voicegames 不会收到也不会存储你的音频。"}},{"@type":"Question","name":"什么算低音、什么算高音？","acceptedAnswer":{"@type":"Answer","text":"哼哼或“嗯——”算低音，篮子左移；口哨或“衣——”算高音，右移。拖长的音最好控制，说话忽高忽低不好用。"}},{"@type":"Question","name":"接到炸弹会怎样？","acceptedAnswer":{"@type":"Answer","text":"本轮立即结束，当前得分保留。炸弹掉落很频繁，贪心的篮子总会中招。"}}]}]}
+</script>
+</head>
+<body data-game="catch">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/zh">全部游戏</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">麦克风关闭</span></div>
+<details class="lang">
+  <summary aria-label="Language">中文</summary>
+  <div class="lang-menu"><a href="/catch" hreflang="en">English</a><a href="/zh/catch" hreflang="zh-CN" aria-current="true">简体中文</a><a href="/es/catch" hreflang="es">Español</a><a href="/ja/catch" hreflang="ja">日本語</a><a href="/pt/catch" hreflang="pt-BR">Português</a><a href="/fr/catch" hreflang="fr">Français</a><a href="/de/catch" hreflang="de">Deutsch</a><a href="/it/catch" hreflang="it">Italiano</a><a href="/ko/catch" hreflang="ko">한국어</a><a href="/ru/catch" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">低音左、高音右</p>
+      <h1>Catch</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Catch"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>个</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">开始</button></div>
+      <p class="heard" id="heard">左右移动篮子，接金币宝石，躲开炸弹。</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>玩法说明 Catch</h2>
+  <ol>
+    <li>点“开始”并允许麦克风。</li>
+    <li>低音（嗯——）篮子左移，高音（口哨）右移；也可以按左右方向键，或按住画面左半边/右半边。</li>
+    <li>金币 +1、蓝宝石 +3，接到炸弹本轮结束。</li>
+    <li>每局 30 秒，挑战最高纪录。</li>
+  </ol>
+  <p>Catch 只在页面内测量音量和音调，音频不离开你的设备，也不做任何录音。篮子、金币和炸弹都是本站手绘的。</p>
+</article>
+<section class="faq">
+  <h2>Catch 常见问题</h2>
+  <h3>Catch免费吗？</h3>
+  <p>免费。Voicegames 上的所有游戏都不要钱，无需注册、无需下载，打开页面就能玩。</p>
+  <h3>Catch在哪些设备上能玩？</h3>
+  <p>任何现代浏览器都能玩，桌面和手机都支持。空格键和鼠标同样可以控制游戏，即使麦克风被拒绝也能玩。</p>
+  <h3>我的声音会被录音吗？</h3>
+  <p>不会。音量类游戏只在页面内测量响度，不保存任何音频；说话类游戏使用 Chrome 内置语音服务把语音转成屏幕上的文字，Voicegames 不会收到也不会存储你的音频。</p>
+  <h3>什么算低音、什么算高音？</h3>
+  <p>哼哼或“嗯——”算低音，篮子左移；口哨或“衣——”算高音，右移。拖长的音最好控制，说话忽高忽低不好用。</p>
+  <h3>接到炸弹会怎样？</h3>
+  <p>本轮立即结束，当前得分保留。炸弹掉落很频繁，贪心的篮子总会中招。</p>
+</section>
+<nav class="more" aria-label="其他游戏">
+  <h2>其他游戏</h2>
+  <ul>
+    <li><a href="/zh/racer">Racer</a> — 音调方向盘</li>
+    <li><a href="/zh/bricks">Bricks</a> — 声控打砖块</li>
+    <li><a href="/zh/floors">Floors</a> — 声控下100层</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames 是一个独立的浏览器游戏网站。</p>
+  <p><a href="/zh/privacy">隐私</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-zh.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/game-catch.js?v=1"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flap — Hold to Rise | Voicegames</title>
 <meta name="description" content="Flap is a free 30-second voice game. Hold a sound and a pixel moth rises through the gaps. Go quiet and it falls. Volume stays on your device.">
-<meta name="keywords" content="flap voice game, pixel flyer, microphone game, volume game">
+<meta name="keywords" content="voice game, microphone game, browser game, flap, hold to rise">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://voicegames.org/flap">
 <meta property="og:title" content="Flap — Hold to Rise | Voicegames">
@@ -14,29 +14,31 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://voicegames.org/flap">
 <meta property="og:site_name" content="Voicegames">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/flap.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:title" content="Flap — Hold to Rise | Voicegames">
 <meta name="twitter:description" content="Flap is a free 30-second voice game. Hold a sound and a pixel moth rises through the gaps. Go quiet and it falls. Volume stays on your device.">
 <meta name="theme-color" content="#1a1410">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/flap">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/flap">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/flap">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/flap">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/flap">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/flap">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/flap">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/flap">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/flap">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/flap">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/flap">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Flap",
-  "url": "https://voicegames.org/flap",
-  "description": "Hold a sound and a pixel moth rises through the gaps. Go quiet and it falls. Thirty seconds.",
-  "playMode": "SinglePlayer",
-  "applicationCategory": "Game",
-  "operatingSystem": "Web",
-  "inLanguage": "en",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "isPartOf": { "@type": "WebSite", "name": "Voicegames", "url": "https://voicegames.org/" }
-}
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Flap","url":"https://voicegames.org/flap","description":"Flap is a free 30-second voice game. Hold a sound and a pixel moth rises through the gaps. Go quiet and it falls. Volume stays on your device.","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Flap free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every game on Voicegames is free, with no account and no download. Open the page and play."}},{"@type":"Question","name":"Where does Flap work?","acceptedAnswer":{"@type":"Answer","text":"It runs in any modern browser, on desktop and mobile. Space and the mouse also control the game, so it works even if the microphone is blocked."}},{"@type":"Question","name":"Is my voice recorded?","acceptedAnswer":{"@type":"Answer","text":"No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio."}},{"@type":"Question","name":"What is the difference between Flap and Flap 3D?","acceptedAnswer":{"@type":"Answer","text":"Same rules, two pictures. Flap is the flat pixel version; Flap 3D adds a blocky side view of the same flight."}},{"@type":"Question","name":"How do I keep the moth at one height?","acceptedAnswer":{"@type":"Answer","text":"Feed it a steady sound — a long “ahhh” at one volume holds it level. Wild volume swings make it bounce."}}]}]}
 </script>
 </head>
 <body data-game="flap">
@@ -44,34 +46,60 @@
 <section class="booth">
   <div class="top">
     <a class="back" href="/">All games</a>
-    <div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+<details class="lang">
+  <summary aria-label="Language">EN</summary>
+  <div class="lang-menu"><a href="/flap" hreflang="en" aria-current="true">English</a><a href="/zh/flap" hreflang="zh-CN">简体中文</a><a href="/es/flap" hreflang="es">Español</a><a href="/ja/flap" hreflang="ja">日本語</a><a href="/pt/flap" hreflang="pt-BR">Português</a><a href="/fr/flap" hreflang="fr">Français</a><a href="/de/flap" hreflang="de">Deutsch</a><a href="/it/flap" hreflang="it">Italiano</a><a href="/ko/flap" hreflang="ko">한국어</a><a href="/ru/flap" hreflang="ru">Русский</a></div>
+</details></div>
   </div>
   <div class="stage play">
-    <p class="kicker" id="kicker">Hold the sound</p>
-    <h1>Flap</h1>
-    <canvas id="world" class="world" width="800" height="360" aria-label="A pixel moth flying toward gaps"></canvas>
-    <p class="heard" id="heard">Keep the sound going and the moth rises.</p>
-    <div class="meters">
-      <div class="stat"><b id="score">0</b><span>passed</span></div>
-      <div class="clock" aria-hidden="true">
-        <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
-        <b id="time">30</b>
-      </div>
+    <div class="game-head">
+      <p class="kicker" id="kicker">Hold the sound</p>
+      <h1>Flap</h1>
     </div>
-    <div class="actions"><button id="go" type="button">Start</button></div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Flap"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>passed</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">Start</button></div>
+      <p class="heard" id="heard">Keep the sound going and the moth rises.</p>
+    </div>
   </div>
 </section>
 <article>
   <h2>How to play Flap</h2>
-  <p>Press Start and allow the microphone. A pixel moth flies toward brick gaps. Hold a sound and it rises. Go quiet and it falls. Pass through a gap to score. Touch a wall, the top, or the ground and the round ends. You have 30 seconds.</p>
+  <ol>
+    <li>Press Start and allow the microphone.</li>
+    <li>Hold a sound and the moth rises. Go quiet and it falls.</li>
+    <li>Fly through a brick gap to score a point.</li>
+    <li>Touch a wall, the top, or the ground and the round ends. You have 30 seconds.</li>
+  </ol>
   <p>Flap measures volume in the page. It does not send audio to a speech service and it does not keep a recording. The moth and the gates are drawn here.</p>
 </article>
+<section class="faq">
+  <h2>Questions about Flap</h2>
+  <h3>Is Flap free?</h3>
+  <p>Yes. Every game on Voicegames is free, with no account and no download. Open the page and play.</p>
+  <h3>Where does Flap work?</h3>
+  <p>It runs in any modern browser, on desktop and mobile. Space and the mouse also control the game, so it works even if the microphone is blocked.</p>
+  <h3>Is my voice recorded?</h3>
+  <p>No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio.</p>
+  <h3>What is the difference between Flap and Flap 3D?</h3>
+  <p>Same rules, two pictures. Flap is the flat pixel version; Flap 3D adds a blocky side view of the same flight.</p>
+  <h3>How do I keep the moth at one height?</h3>
+  <p>Feed it a steady sound — a long “ahhh” at one volume holds it level. Wild volume swings make it bounce.</p>
+</section>
 <nav class="more" aria-label="Other games">
   <h2>Other games</h2>
   <ul>
-    <li><a href="/dino">Dino</a> — shout to jump</li>
-    <li><a href="/3d/flap">Flap 3D</a> — the block picture</li>
-    <li><a href="/float">Float</a> — steer through the hole</li>
+    <li><a href="/dino">Dino</a> — The 2D picture</li>
+    <li><a href="/float">Float</a> — The 2D picture</li>
+    <li><a href="/3d/flap">Flap 3D</a> — Hold a sound to rise through the gaps</li>
   </ul>
 </nav>
 <footer class="site-foot">
@@ -79,6 +107,9 @@
   <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
   <p>© 2026 Voicegames</p>
 </footer>
-<script src="/js/world.js"></script>
+<script src="/js/words-en.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tug — 機械と声比べ | Voicegames</title>
+<meta name="description" content="Tug は30秒の無料ボイスゲーム。声の音量で綱を引き、ラウンドごとに強くなるマシンと勝負。録音はしません。">
+<meta name="keywords" content="音声ゲーム,マイクゲーム,ブラウザゲーム,声ゲーム,Tug,機械と声比べ">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/ja/tug">
+<meta property="og:title" content="Tug — 機械と声比べ | Voicegames">
+<meta property="og:description" content="Tug は30秒の無料ボイスゲーム。声の音量で綱を引き、ラウンドごとに強くなるマシンと勝負。録音はしません。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://voicegames.org/ja/tug">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/tug.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Tug — 機械と声比べ | Voicegames">
+<meta name="twitter:description" content="Tug は30秒の無料ボイスゲーム。声の音量で綱を引き、ラウンドごとに強くなるマシンと勝負。録音はしません。">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/tug">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/tug">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/tug">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/tug">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/tug">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/tug">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/tug">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/tug">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/tug">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/tug">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/tug">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Tug","url":"https://voicegames.org/ja/tug","description":"Tug は30秒の無料ボイスゲーム。声の音量で綱を引き、ラウンドごとに強くなるマシンと勝負。録音はしません。","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Tugは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい。Voicegames のゲームはすべて無料。アカウントもダウンロードも不要で、ページを開けば遊べます。"}},{"@type":"Question","name":"Tugはどこで遊べますか？","acceptedAnswer":{"@type":"Answer","text":"最新のブラウザなら、パソコンでもスマホでも遊べます。スペースキーとマウスでも操作できるので、マイクがブロックされていても大丈夫。"}},{"@type":"Question","name":"声は録音されますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。音量系ゲームはページ内で音の大きさを測るだけで、音声を保存しません。発話系ゲームは Chrome 内蔵の音声認識で画面に文字として表示するだけで、Voicegames が音声を受け取ったり保存したりすることはありません。"}},{"@type":"Question","name":"どのくらい大声が必要？","acceptedAnswer":{"@type":"Answer","text":"最初のラウンドは普通に大きな声で勝てます。3ラウンド目からは叫びです。設計通りです。"}},{"@type":"Question","name":"マシンにラウンドを取られたら？","acceptedAnswer":{"@type":"Answer","text":"マーカーは中央に戻り、マシンは少し手加減。1敗が雪だるまにはなりません。"}}]}]}
+</script>
+</head>
+<body data-game="tug">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/ja">すべてのゲーム</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">マイク オフ</span></div>
+<details class="lang">
+  <summary aria-label="Language">JA</summary>
+  <div class="lang-menu"><a href="/tug" hreflang="en">English</a><a href="/zh/tug" hreflang="zh-CN">简体中文</a><a href="/es/tug" hreflang="es">Español</a><a href="/ja/tug" hreflang="ja" aria-current="true">日本語</a><a href="/pt/tug" hreflang="pt-BR">Português</a><a href="/fr/tug" hreflang="fr">Français</a><a href="/de/tug" hreflang="de">Deutsch</a><a href="/it/tug" hreflang="it">Italiano</a><a href="/ko/tug" hreflang="ko">한국어</a><a href="/ru/tug" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">大きい声ほど強く引く</p>
+      <h1>Tug</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Tug"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>回</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">スタート</button></div>
+      <p class="heard" id="heard">音量でマーカーを自分のラインへ。</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>遊び方： Tug</h2>
+  <ol>
+    <li>スタートを押してマイクを許可。</li>
+    <li>叫ぶ・歌う・ハミング——大きい声ほど強く引けます。</li>
+    <li>マーカーを緑のライン越えさせたら1ラウンド勝ち。マシンは巻き返し、ラウンドごとに強くなります。</li>
+    <li>30秒でできるだけ多くのラウンドを勝ち取りましょう。</li>
+  </ol>
+  <p>Tug はページ内で音量を測るだけで、送信も録音もありません。綱も旗も引き手もこのサイトで描いています。</p>
+</article>
+<section class="faq">
+  <h2>Tug のよくある質問</h2>
+  <h3>Tugは無料ですか？</h3>
+  <p>はい。Voicegames のゲームはすべて無料。アカウントもダウンロードも不要で、ページを開けば遊べます。</p>
+  <h3>Tugはどこで遊べますか？</h3>
+  <p>最新のブラウザなら、パソコンでもスマホでも遊べます。スペースキーとマウスでも操作できるので、マイクがブロックされていても大丈夫。</p>
+  <h3>声は録音されますか？</h3>
+  <p>いいえ。音量系ゲームはページ内で音の大きさを測るだけで、音声を保存しません。発話系ゲームは Chrome 内蔵の音声認識で画面に文字として表示するだけで、Voicegames が音声を受け取ったり保存したりすることはありません。</p>
+  <h3>どのくらい大声が必要？</h3>
+  <p>最初のラウンドは普通に大きな声で勝てます。3ラウンド目からは叫びです。設計通りです。</p>
+  <h3>マシンにラウンドを取られたら？</h3>
+  <p>マーカーは中央に戻り、マシンは少し手加減。1敗が雪だるまにはなりません。</p>
+</section>
+<nav class="more" aria-label="他のゲーム">
+  <h2>他のゲーム</h2>
+  <ul>
+    <li><a href="/ja/march">March</a> — 声で歩く定番</li>
+    <li><a href="/ja/puff">Puff</a> — 風船で度胸</li>
+    <li><a href="/ja/louder">Louder</a> — 大きな声の秒数がスコア</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames は独立系のブラウザゲームサイトです。</p>
+  <p><a href="/ja/privacy">プライバシー</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-ja.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/game-tug.js?v=1"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

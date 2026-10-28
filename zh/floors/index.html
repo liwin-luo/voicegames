@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floors — 声控下100层 | Voicegames</title>
+<meta name="description" content="下100层是一款免费的 30 秒声控游戏：小人不断下坠，低音往左、高音往右，穿过缺口躲开尖刺。不录任何音频。">
+<meta name="keywords" content="声音游戏,语音游戏,麦克风游戏,网页游戏,Floors,声控下100层">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/zh/floors">
+<meta property="og:title" content="Floors — 声控下100层 | Voicegames">
+<meta property="og:description" content="下100层是一款免费的 30 秒声控游戏：小人不断下坠，低音往左、高音往右，穿过缺口躲开尖刺。不录任何音频。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://voicegames.org/zh/floors">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/floors.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Floors — 声控下100层 | Voicegames">
+<meta name="twitter:description" content="下100层是一款免费的 30 秒声控游戏：小人不断下坠，低音往左、高音往右，穿过缺口躲开尖刺。不录任何音频。">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/floors">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/floors">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/floors">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/floors">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/floors">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/floors">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/floors">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/floors">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/floors">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/floors">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/floors">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Floors","url":"https://voicegames.org/zh/floors","description":"下100层是一款免费的 30 秒声控游戏：小人不断下坠，低音往左、高音往右，穿过缺口躲开尖刺。不录任何音频。","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Floors免费吗？","acceptedAnswer":{"@type":"Answer","text":"免费。Voicegames 上的所有游戏都不要钱，无需注册、无需下载，打开页面就能玩。"}},{"@type":"Question","name":"Floors在哪些设备上能玩？","acceptedAnswer":{"@type":"Answer","text":"任何现代浏览器都能玩，桌面和手机都支持。空格键和鼠标同样可以控制游戏，即使麦克风被拒绝也能玩。"}},{"@type":"Question","name":"我的声音会被录音吗？","acceptedAnswer":{"@type":"Answer","text":"不会。音量类游戏只在页面内测量响度，不保存任何音频；说话类游戏使用 Chrome 内置语音服务把语音转成屏幕上的文字，Voicegames 不会收到也不会存储你的音频。"}},{"@type":"Question","name":"声控方向是怎么实现的？","acceptedAnswer":{"@type":"Answer","text":"页面会实时分析你声音的音调：低音（哼哼）往左，高音（口哨或“衣——”）往右；安静时他直直下落。"}},{"@type":"Question","name":"Floors 和“是男人就下100层”一样吗？","acceptedAnswer":{"@type":"Answer","text":"这是我们自己的声控版下塔玩法：同样的小人下坠和尖刺天花板，只是方向键换成了你的音调。"}}]}]}
+</script>
+</head>
+<body data-game="floors">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/zh">全部游戏</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">麦克风关闭</span></div>
+<details class="lang">
+  <summary aria-label="Language">中文</summary>
+  <div class="lang-menu"><a href="/floors" hreflang="en">English</a><a href="/zh/floors" hreflang="zh-CN" aria-current="true">简体中文</a><a href="/es/floors" hreflang="es">Español</a><a href="/ja/floors" hreflang="ja">日本語</a><a href="/pt/floors" hreflang="pt-BR">Português</a><a href="/fr/floors" hreflang="fr">Français</a><a href="/de/floors" hreflang="de">Deutsch</a><a href="/it/floors" hreflang="it">Italiano</a><a href="/ko/floors" hreflang="ko">한국어</a><a href="/ru/floors" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">低音往左、高音往右</p>
+      <h1>Floors</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Floors"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>层</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">开始</button></div>
+      <p class="heard" id="heard">低音往左走，高音往右走。</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>玩法说明 Floors</h2>
+  <ol>
+    <li>点“开始”并允许麦克风。</li>
+    <li>小人会自己往下掉。发出低沉的“嗯——”他就往左走；吹口哨或发高音就往右走。</li>
+    <li>带他穿过每层楼板的缺口。尖刺楼板和不断下压的尖刺天花板都会结束本轮。</li>
+    <li>也可以按左右方向键，或按住画面左半边/右半边。每局 30 秒。</li>
+  </ol>
+  <p>Floors 只在页面内分析音调，音频不离开你的设备，也不做任何录音。小人、井壁和尖刺都是本站手绘的。</p>
+</article>
+<section class="faq">
+  <h2>Floors 常见问题</h2>
+  <h3>Floors免费吗？</h3>
+  <p>免费。Voicegames 上的所有游戏都不要钱，无需注册、无需下载，打开页面就能玩。</p>
+  <h3>Floors在哪些设备上能玩？</h3>
+  <p>任何现代浏览器都能玩，桌面和手机都支持。空格键和鼠标同样可以控制游戏，即使麦克风被拒绝也能玩。</p>
+  <h3>我的声音会被录音吗？</h3>
+  <p>不会。音量类游戏只在页面内测量响度，不保存任何音频；说话类游戏使用 Chrome 内置语音服务把语音转成屏幕上的文字，Voicegames 不会收到也不会存储你的音频。</p>
+  <h3>声控方向是怎么实现的？</h3>
+  <p>页面会实时分析你声音的音调：低音（哼哼）往左，高音（口哨或“衣——”）往右；安静时他直直下落。</p>
+  <h3>Floors 和“是男人就下100层”一样吗？</h3>
+  <p>这是我们自己的声控版下塔玩法：同样的小人下坠和尖刺天花板，只是方向键换成了你的音调。</p>
+</section>
+<nav class="more" aria-label="其他游戏">
+  <h2>其他游戏</h2>
+  <ul>
+    <li><a href="/zh/miner">Miner</a> — 声控黄金矿工</li>
+    <li><a href="/zh/3d/floors">Floors 3D</a> — 方块版的下100层</li>
+    <li><a href="/zh/float">Float</a> — 2D 经典版</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames 是一个独立的浏览器游戏网站。</p>
+  <p><a href="/zh/privacy">隐私</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-zh.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

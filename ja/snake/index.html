@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake — 音程で蛇を操作 | Voicegames</title>
+<meta name="description" content="Snake は30秒の無料ボイスゲーム。低音で左ターン、高音で右ターン——りんごを食べて育とう。録音はしません。">
+<meta name="keywords" content="音声ゲーム,マイクゲーム,ブラウザゲーム,声ゲーム,Snake,音程で蛇を操作">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/ja/snake">
+<meta property="og:title" content="Snake — 音程で蛇を操作 | Voicegames">
+<meta property="og:description" content="Snake は30秒の無料ボイスゲーム。低音で左ターン、高音で右ターン——りんごを食べて育とう。録音はしません。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://voicegames.org/ja/snake">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/snake.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Snake — 音程で蛇を操作 | Voicegames">
+<meta name="twitter:description" content="Snake は30秒の無料ボイスゲーム。低音で左ターン、高音で右ターン——りんごを食べて育とう。録音はしません。">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/snake">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/snake">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/snake">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/snake">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/snake">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/snake">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/snake">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/snake">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/snake">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/snake">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/snake">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Snake","url":"https://voicegames.org/ja/snake","description":"Snake は30秒の無料ボイスゲーム。低音で左ターン、高音で右ターン——りんごを食べて育とう。録音はしません。","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Snakeは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい。Voicegames のゲームはすべて無料。アカウントもダウンロードも不要で、ページを開けば遊べます。"}},{"@type":"Question","name":"Snakeはどこで遊べますか？","acceptedAnswer":{"@type":"Answer","text":"最新のブラウザなら、パソコンでもスマホでも遊べます。スペースキーとマウスでも操作できるので、マイクがブロックされていても大丈夫。"}},{"@type":"Question","name":"声は録音されますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。音量系ゲームはページ内で音の大きさを測るだけで、音声を保存しません。発話系ゲームは Chrome 内蔵の音声認識で画面に文字として表示するだけで、Voicegames が音声を受け取ったり保存したりすることはありません。"}},{"@type":"Question","name":"ターンは絶対？相対？","acceptedAnswer":{"@type":"Answer","text":"相対です。「左」は蛇から見た左。低音2回でUターンできます。"}},{"@type":"Question","name":"最初の蛇の長さは？","acceptedAnswer":{"@type":"Answer","text":"最初は4マス。りんごごとに2マス伸びて、テンポも上がります。"}}]}]}
+</script>
+</head>
+<body data-game="snake">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/ja">すべてのゲーム</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">マイク オフ</span></div>
+<details class="lang">
+  <summary aria-label="Language">JA</summary>
+  <div class="lang-menu"><a href="/snake" hreflang="en">English</a><a href="/zh/snake" hreflang="zh-CN">简体中文</a><a href="/es/snake" hreflang="es">Español</a><a href="/ja/snake" hreflang="ja" aria-current="true">日本語</a><a href="/pt/snake" hreflang="pt-BR">Português</a><a href="/fr/snake" hreflang="fr">Français</a><a href="/de/snake" hreflang="de">Deutsch</a><a href="/it/snake" hreflang="it">Italiano</a><a href="/ko/snake" hreflang="ko">한국어</a><a href="/ru/snake" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">低音は左、高音は右に曲がる</p>
+      <h1>Snake</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Snake"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>個</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">スタート</button></div>
+      <p class="heard" id="heard">りんごを食べて、自分を噛まない。</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>遊び方： Snake</h2>
+  <ol>
+    <li>スタートを押してマイクを許可。</li>
+    <li>蛇はひとりで進みます。低音で左、高音で右——進行方向から見たターンです。</li>
+    <li>りんごを1つ食べるごとに1点、体が2マス伸びる。</li>
+    <li>壁や自分にぶつかるとラウンド終了。時間は30秒。</li>
+  </ol>
+  <p>Snake はページ内で音程を測るだけ。録音はしません。蛇もりんごもこのサイトのオリジナル描画です。</p>
+</article>
+<section class="faq">
+  <h2>Snake のよくある質問</h2>
+  <h3>Snakeは無料ですか？</h3>
+  <p>はい。Voicegames のゲームはすべて無料。アカウントもダウンロードも不要で、ページを開けば遊べます。</p>
+  <h3>Snakeはどこで遊べますか？</h3>
+  <p>最新のブラウザなら、パソコンでもスマホでも遊べます。スペースキーとマウスでも操作できるので、マイクがブロックされていても大丈夫。</p>
+  <h3>声は録音されますか？</h3>
+  <p>いいえ。音量系ゲームはページ内で音の大きさを測るだけで、音声を保存しません。発話系ゲームは Chrome 内蔵の音声認識で画面に文字として表示するだけで、Voicegames が音声を受け取ったり保存したりすることはありません。</p>
+  <h3>ターンは絶対？相対？</h3>
+  <p>相対です。「左」は蛇から見た左。低音2回でUターンできます。</p>
+  <h3>最初の蛇の長さは？</h3>
+  <p>最初は4マス。りんごごとに2マス伸びて、テンポも上がります。</p>
+</section>
+<nav class="more" aria-label="他のゲーム">
+  <h2>他のゲーム</h2>
+  <ul>
+    <li><a href="/ja/racer">Racer</a> — 声のハンドル</li>
+    <li><a href="/ja/bricks">Bricks</a> — 音程のブロック崩し</li>
+    <li><a href="/ja/catch">Catch</a> — コインを取り、爆弾を避ける</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames は独立系のブラウザゲームサイトです。</p>
+  <p><a href="/ja/privacy">プライバシー</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-ja.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/game-snake.js?v=1"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

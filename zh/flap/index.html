@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flap — 发声上升 | Voicegames</title>
+<meta name="description" content="飞蛾是一款免费的 2D 声音游戏，每局 30 秒：持续出声让像素飞蛾穿过砖墙缝隙，安静下来它就会坠落。">
+<meta name="keywords" content="声音游戏,语音游戏,麦克风游戏,网页游戏,Flap,发声上升">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/zh/flap">
+<meta property="og:title" content="Flap — 发声上升 | Voicegames">
+<meta property="og:description" content="飞蛾是一款免费的 2D 声音游戏，每局 30 秒：持续出声让像素飞蛾穿过砖墙缝隙，安静下来它就会坠落。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://voicegames.org/zh/flap">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/flap.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Flap — 发声上升 | Voicegames">
+<meta name="twitter:description" content="飞蛾是一款免费的 2D 声音游戏，每局 30 秒：持续出声让像素飞蛾穿过砖墙缝隙，安静下来它就会坠落。">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/flap">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/flap">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/flap">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/flap">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/flap">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/flap">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/flap">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/flap">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/flap">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/flap">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/flap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Flap","url":"https://voicegames.org/zh/flap","description":"飞蛾是一款免费的 2D 声音游戏，每局 30 秒：持续出声让像素飞蛾穿过砖墙缝隙，安静下来它就会坠落。","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Flap免费吗？","acceptedAnswer":{"@type":"Answer","text":"免费。Voicegames 上的所有游戏都不要钱，无需注册、无需下载，打开页面就能玩。"}},{"@type":"Question","name":"Flap在哪些设备上能玩？","acceptedAnswer":{"@type":"Answer","text":"任何现代浏览器都能玩，桌面和手机都支持。空格键和鼠标同样可以控制游戏，即使麦克风被拒绝也能玩。"}},{"@type":"Question","name":"我的声音会被录音吗？","acceptedAnswer":{"@type":"Answer","text":"不会。音量类游戏只在页面内测量响度，不保存任何音频；说话类游戏使用 Chrome 内置语音服务把语音转成屏幕上的文字，Voicegames 不会收到也不会存储你的音频。"}},{"@type":"Question","name":"飞蛾和 3D 飞蛾有什么区别？","acceptedAnswer":{"@type":"Answer","text":"规则相同，画面不同。飞蛾是平面像素版；3D 飞蛾是同一玩法的立体视角版。"}},{"@type":"Question","name":"怎么让飞蛾保持在一个高度？","acceptedAnswer":{"@type":"Answer","text":"给它一个稳定的声音——用恒定音量拉一个长音就能让它平飞；音量忽大忽小它就会上下颠。"}}]}]}
+</script>
+</head>
+<body data-game="flap">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/zh">全部游戏</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">麦克风关闭</span></div>
+<details class="lang">
+  <summary aria-label="Language">中文</summary>
+  <div class="lang-menu"><a href="/flap" hreflang="en">English</a><a href="/zh/flap" hreflang="zh-CN" aria-current="true">简体中文</a><a href="/es/flap" hreflang="es">Español</a><a href="/ja/flap" hreflang="ja">日本語</a><a href="/pt/flap" hreflang="pt-BR">Português</a><a href="/fr/flap" hreflang="fr">Français</a><a href="/de/flap" hreflang="de">Deutsch</a><a href="/it/flap" hreflang="it">Italiano</a><a href="/ko/flap" hreflang="ko">한국어</a><a href="/ru/flap" hreflang="ru">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">持续发声</p>
+      <h1>Flap</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Flap"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>个通过</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">开始</button></div>
+      <p class="heard" id="heard">持续出声，飞蛾就会上升。</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>玩法说明 Flap</h2>
+  <ol>
+    <li>点“开始”并允许麦克风。</li>
+    <li>持续出声飞蛾就上升，安静下来就坠落。</li>
+    <li>每穿过一道砖缝得 1 分。</li>
+    <li>撞到墙、顶或地面本轮结束。每局 30 秒。</li>
+  </ol>
+  <p>飞蛾只在页面内测量音量，不向语音服务发送音频，也不做任何录音。飞蛾和砖墙都是本站手绘的。</p>
+</article>
+<section class="faq">
+  <h2>Flap 常见问题</h2>
+  <h3>Flap免费吗？</h3>
+  <p>免费。Voicegames 上的所有游戏都不要钱，无需注册、无需下载，打开页面就能玩。</p>
+  <h3>Flap在哪些设备上能玩？</h3>
+  <p>任何现代浏览器都能玩，桌面和手机都支持。空格键和鼠标同样可以控制游戏，即使麦克风被拒绝也能玩。</p>
+  <h3>我的声音会被录音吗？</h3>
+  <p>不会。音量类游戏只在页面内测量响度，不保存任何音频；说话类游戏使用 Chrome 内置语音服务把语音转成屏幕上的文字，Voicegames 不会收到也不会存储你的音频。</p>
+  <h3>飞蛾和 3D 飞蛾有什么区别？</h3>
+  <p>规则相同，画面不同。飞蛾是平面像素版；3D 飞蛾是同一玩法的立体视角版。</p>
+  <h3>怎么让飞蛾保持在一个高度？</h3>
+  <p>给它一个稳定的声音——用恒定音量拉一个长音就能让它平飞；音量忽大忽小它就会上下颠。</p>
+</section>
+<nav class="more" aria-label="其他游戏">
+  <h2>其他游戏</h2>
+  <ul>
+    <li><a href="/zh/dino">Dino</a> — 2D 经典版</li>
+    <li><a href="/zh/float">Float</a> — 2D 经典版</li>
+    <li><a href="/zh/3d/flap">Flap 3D</a> — 持续出声穿过缝隙</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames 是一个独立的浏览器游戏网站。</p>
+  <p><a href="/zh/privacy">隐私</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-zh.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

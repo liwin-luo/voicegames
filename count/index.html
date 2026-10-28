@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Count — Say the Numbers Out Loud | Voicegames</title>
 <meta name="description" content="Count is a free voice game. Say one, then two, and keep going up to thirty. You have 60 seconds. Play in desktop Chrome.">
-<meta name="keywords" content="count out loud, say the numbers, number voice game, counting game, microphone game">
+<meta name="keywords" content="voice game, microphone game, browser game, count, say the numbers out loud">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://voicegames.org/count">
 <meta property="og:title" content="Count — Say the Numbers Out Loud | Voicegames">
@@ -14,29 +14,31 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://voicegames.org/count">
 <meta property="og:site_name" content="Voicegames">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/count.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:title" content="Count — Say the Numbers Out Loud | Voicegames">
 <meta name="twitter:description" content="Count is a free voice game. Say one, then two, and keep going up to thirty. You have 60 seconds. Play in desktop Chrome.">
 <meta name="theme-color" content="#1a1410">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/count">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/count">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/count">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/count">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/count">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/count">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/count">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/count">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/count">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/count">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/count">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Count",
-  "url": "https://voicegames.org/count",
-  "description": "Say the next number out loud, from one toward thirty, in 60 seconds.",
-  "playMode": "SinglePlayer",
-  "applicationCategory": "Game",
-  "operatingSystem": "Web",
-  "inLanguage": "en",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "isPartOf": { "@type": "WebSite", "name": "Voicegames", "url": "https://voicegames.org/" }
-}
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Count","url":"https://voicegames.org/count","description":"Count is a free voice game. Say one, then two, and keep going up to thirty. You have 60 seconds. Play in desktop Chrome.","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Count free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every game on Voicegames is free, with no account and no download. Open the page and play."}},{"@type":"Question","name":"Where does Count work?","acceptedAnswer":{"@type":"Answer","text":"The speaking games need a microphone and desktop Chrome, on a computer. Chrome sends your audio to its speech service and shows the words on the page."}},{"@type":"Question","name":"Is my voice recorded?","acceptedAnswer":{"@type":"Answer","text":"No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio."}},{"@type":"Question","name":"What if I say a number out of order?","acceptedAnswer":{"@type":"Answer","text":"Nothing bad — the screen keeps asking for the same number until it hears the right one. Only correct order scores."}},{"@type":"Question","name":"Does “twenty-one” have to be exact?","acceptedAnswer":{"@type":"Answer","text":"Close is fine. The game accepts common variants and digits — “twenty one”, “21”, regional readings — so natural counting just works."}}]}]}
 </script>
 </head>
 <body data-game="count">
@@ -44,36 +46,58 @@
 <section class="booth">
   <div class="top">
     <a class="back" href="/">All games</a>
-    <div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">Off air</span></div>
+<details class="lang">
+  <summary aria-label="Language">EN</summary>
+  <div class="lang-menu"><a href="/count" hreflang="en" aria-current="true">English</a><a href="/zh/count" hreflang="zh-CN">简体中文</a><a href="/es/count" hreflang="es">Español</a><a href="/ja/count" hreflang="ja">日本語</a><a href="/pt/count" hreflang="pt-BR">Português</a><a href="/fr/count" hreflang="fr">Français</a><a href="/de/count" hreflang="de">Deutsch</a><a href="/it/count" hreflang="it">Italiano</a><a href="/ko/count" hreflang="ko">한국어</a><a href="/ru/count" hreflang="ru">Русский</a></div>
+</details></div>
   </div>
-  <div class="stage">
+  <div class="stage play">
     <p class="kicker" id="kicker">Say this number</p>
-    <h1 id="title">Count</h1>
-    <p class="word" id="word" data-prompt="one" hidden></p>
-    <p class="heard" id="heard">Start at one and keep going.</p>
-    <div class="meters">
-      <div class="stat"><b id="score">0</b><span>correct</span></div>
-      <div class="clock" aria-hidden="true">
-        <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
-        <b id="time">60</b>
+    <div class="screen speak">
+      <h1 id="title"><span class="attract">Count up from one, out loud</span>Count</h1>
+      <p class="word" id="word" data-prompt="one" hidden></p>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>correct</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">60</b>
+        </div>
       </div>
+      <div class="actions"><button id="go" type="button">Start</button></div>
+      <p class="heard" id="heard">Start at one and keep going.</p>
     </div>
-    <div class="actions"><button id="go" type="button">Start</button></div>
   </div>
 </section>
 <article>
   <h2>How to play Count</h2>
-  <p>Press Start. The first number is one. Say it, then say the next number when it appears. The count stops at thirty, or when 60 seconds run out, whichever comes first.</p>
+  <ol>
+    <li>Press Start. The first number is one.</li>
+    <li>Say the number on screen, then say the next one when it appears.</li>
+    <li>The score adds one for every number it hears in order.</li>
+    <li>The count stops at thirty, or when 60 seconds run out.</li>
+  </ol>
   <p>Count uses Chrome’s speech service to turn your voice into text. This page does not store the recording. Open it in desktop Chrome.</p>
 </article>
+<section class="faq">
+  <h2>Questions about Count</h2>
+  <h3>Is Count free?</h3>
+  <p>Yes. Every game on Voicegames is free, with no account and no download. Open the page and play.</p>
+  <h3>Where does Count work?</h3>
+  <p>The speaking games need a microphone and desktop Chrome, on a computer. Chrome sends your audio to its speech service and shows the words on the page.</p>
+  <h3>Is my voice recorded?</h3>
+  <p>No. The volume games measure loudness inside the page and never keep audio. The speaking games use Chrome’s built-in speech service to turn speech into text on your screen; Voicegames never receives or stores the audio.</p>
+  <h3>What if I say a number out of order?</h3>
+  <p>Nothing bad — the screen keeps asking for the same number until it hears the right one. Only correct order scores.</p>
+  <h3>Does “twenty-one” have to be exact?</h3>
+  <p>Close is fine. The game accepts common variants and digits — “twenty one”, “21”, regional readings — so natural counting just works.</p>
+</section>
 <nav class="more" aria-label="Other games">
   <h2>Other games</h2>
   <ul>
-    <li><a href="/say">Say it</a> — say the word</li>
-    <li><a href="/repeat">Repeat</a> — say the whole line</li>
-    <li><a href="/louder">Louder</a> — stay loud</li>
-    <li><a href="/voice-over">Voice over</a> — read the line</li>
-    <li><a href="/voice-acting">Voice acting</a> — say it in a mood</li>
+    <li><a href="/say">Say it</a> — One word appears — say it</li>
+    <li><a href="/repeat">Repeat</a> — Say the whole line back</li>
+    <li><a href="/louder">Louder</a> — Score every loud second</li>
   </ul>
 </nav>
 <footer class="site-foot">
@@ -81,6 +105,9 @@
   <p><a href="/privacy">Privacy</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
   <p>© 2026 Voicegames</p>
 </footer>
-<script src="/js/play.js"></script>
+<script src="/js/words-en.js?v=1"></script>
+<script src="/js/play.js?v=3"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
 </body>
 </html>

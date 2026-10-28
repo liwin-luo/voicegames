@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake — Змея по высоте тона | Voicegames</title>
+<meta name="description" content="Snake — бесплатная голосовая игра на 30 секунд. Низкий тон поворачивает влево, высокий вправо — ешь яблоки и не кусай себя. Ничего не записывается.">
+<meta name="keywords" content="игра голосом, игра с микрофоном, браузерная игра, Snake, Змея по высоте тона">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicegames.org/ru/snake">
+<meta property="og:title" content="Snake — Змея по высоте тона | Voicegames">
+<meta property="og:description" content="Snake — бесплатная голосовая игра на 30 секунд. Низкий тон поворачивает влево, высокий вправо — ешь яблоки и не кусай себя. Ничего не записывается.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://voicegames.org/ru/snake">
+<meta property="og:site_name" content="Voicegames">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://voicegames.org/og/snake.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Snake — Змея по высоте тона | Voicegames">
+<meta name="twitter:description" content="Snake — бесплатная голосовая игра на 30 секунд. Низкий тон поворачивает влево, высокий вправо — ешь яблоки и не кусай себя. Ничего не записывается.">
+<meta name="theme-color" content="#1a1410">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v=12">
+<link rel="alternate" hreflang="en" href="https://voicegames.org/snake">
+<link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/snake">
+<link rel="alternate" hreflang="es" href="https://voicegames.org/es/snake">
+<link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/snake">
+<link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/snake">
+<link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/snake">
+<link rel="alternate" hreflang="de" href="https://voicegames.org/de/snake">
+<link rel="alternate" hreflang="it" href="https://voicegames.org/it/snake">
+<link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/snake">
+<link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/snake">
+<link rel="alternate" hreflang="x-default" href="https://voicegames.org/snake">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"VideoGame","name":"Snake","url":"https://voicegames.org/ru/snake","description":"Snake — бесплатная голосовая игра на 30 секунд. Низкий тон поворачивает влево, высокий вправо — ешь яблоки и не кусай себя. Ничего не записывается.","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web","inLanguage":"ru","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Voicegames","url":"https://voicegames.org/"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Snake бесплатна?","acceptedAnswer":{"@type":"Answer","text":"Да. Все игры Voicegames бесплатны — без аккаунта и без загрузок. Открой страницу и играй."}},{"@type":"Question","name":"Где работает Snake?","acceptedAnswer":{"@type":"Answer","text":"Работает в любом современном браузере, на компьютере и телефоне. Пробел и мышь тоже управляют игрой — можно играть даже без микрофона."}},{"@type":"Question","name":"Записывается ли мой голос?","acceptedAnswer":{"@type":"Answer","text":"Нет. Игры на громкость измеряют уровень прямо на странице и никогда не сохраняют аудио. Речевые игры используют встроенное распознавание Chrome, чтобы показать слова на экране; Voicegames не получает и не хранит аудио."}},{"@type":"Question","name":"Повороты абсолютные или относительные?","acceptedAnswer":{"@type":"Answer","text":"Относительные: «влево» — это всегда лево самой змеи, как настоящий поворот. Два быстрых низких тона — разворот."}},{"@type":"Question","name":"Какая длина в начале?","acceptedAnswer":{"@type":"Answer","text":"Четыре клетки. Каждое яблоко добавляет две, темп растёт — в конце тесно."}}]}]}
+</script>
+</head>
+<body data-game="snake">
+<div class="grain" aria-hidden="true"></div>
+<section class="booth">
+  <div class="top">
+    <a class="back" href="/ru">Все игры</a>
+    <div class="top-right"><div class="lamp"><i></i> <span id="lamp">Микрофон выкл</span></div>
+<details class="lang">
+  <summary aria-label="Language">RU</summary>
+  <div class="lang-menu"><a href="/snake" hreflang="en">English</a><a href="/zh/snake" hreflang="zh-CN">简体中文</a><a href="/es/snake" hreflang="es">Español</a><a href="/ja/snake" hreflang="ja">日本語</a><a href="/pt/snake" hreflang="pt-BR">Português</a><a href="/fr/snake" hreflang="fr">Français</a><a href="/de/snake" hreflang="de">Deutsch</a><a href="/it/snake" hreflang="it">Italiano</a><a href="/ko/snake" hreflang="ko">한국어</a><a href="/ru/snake" hreflang="ru" aria-current="true">Русский</a></div>
+</details></div>
+  </div>
+  <div class="stage play">
+    <div class="game-head">
+      <p class="kicker" id="kicker">Низкий влево, высокий вправо</p>
+      <h1>Snake</h1>
+    </div>
+    <div class="screen">
+      <canvas id="world" class="world" width="800" height="360" aria-label="Snake"></canvas>
+      <div class="meters">
+        <div class="stat"><b id="score">0</b><span>пройдено</span></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15.5"></circle><circle class="value" id="ring" cx="18" cy="18" r="15.5" stroke-dasharray="97.4" stroke-dashoffset="0"></circle></svg>
+          <b id="time">30</b>
+        </div>
+      </div>
+      <div class="actions"><button id="go" type="button">Старт</button></div>
+      <p class="heard" id="heard">Ешь яблоки. Не кусай себя.</p>
+    </div>
+  </div>
+</section>
+<article>
+  <h2>Как играть в Snake</h2>
+  <ol>
+    <li>Нажми Старт и разреши микрофон.</li>
+    <li>Змея ползёт сама. Низкий тон поворачивает её влево, высокий вправо — относительно её хода.</li>
+    <li>Каждое яблоко — очко и плюс две клетки длины.</li>
+    <li>Укус стены или себя завершает раунд. У тебя 30 секунд.</li>
+  </ol>
+  <p>Snake слушает высоту тона прямо на странице. Аудио не покидает твоё устройство и ничего не сохраняется. Змея и яблоки нарисованы здесь.</p>
+</article>
+<section class="faq">
+  <h2>Вопросы о Snake</h2>
+  <h3>Snake бесплатна?</h3>
+  <p>Да. Все игры Voicegames бесплатны — без аккаунта и без загрузок. Открой страницу и играй.</p>
+  <h3>Где работает Snake?</h3>
+  <p>Работает в любом современном браузере, на компьютере и телефоне. Пробел и мышь тоже управляют игрой — можно играть даже без микрофона.</p>
+  <h3>Записывается ли мой голос?</h3>
+  <p>Нет. Игры на громкость измеряют уровень прямо на странице и никогда не сохраняют аудио. Речевые игры используют встроенное распознавание Chrome, чтобы показать слова на экране; Voicegames не получает и не хранит аудио.</p>
+  <h3>Повороты абсолютные или относительные?</h3>
+  <p>Относительные: «влево» — это всегда лево самой змеи, как настоящий поворот. Два быстрых низких тона — разворот.</p>
+  <h3>Какая длина в начале?</h3>
+  <p>Четыре клетки. Каждое яблоко добавляет две, темп растёт — в конце тесно.</p>
+</section>
+<nav class="more" aria-label="Другие игры">
+  <h2>Другие игры</h2>
+  <ul>
+    <li><a href="/ru/racer">Racer</a> — Руль из голоса</li>
+    <li><a href="/ru/bricks">Bricks</a> — Арканоид по тону</li>
+    <li><a href="/ru/catch">Catch</a> — Монеты — да, бомбы — нет</li>
+  </ul>
+</nav>
+<footer class="site-foot">
+  <p>Voicegames — независимый сайт браузерных игр.</p>
+  <p><a href="/ru/privacy">Конфиденциальность</a> · <a href="mailto:svay9298@agent.qq.com">svay9298@agent.qq.com</a></p>
+  <p>© 2026 Voicegames</p>
+</footer>
+<script src="/js/words-ru.js?v=1"></script>
+<script src="/js/world.js?v=7"></script>
+<script src="/js/game-snake.js?v=1"></script>
+<script src="/js/share.js?v=1"></script>
+<script src="/js/hud.js?v=3"></script>
+</body>
+</html>

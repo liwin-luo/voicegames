@@ -1,63 +1,381 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://voicegames.org/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/say</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/count</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/repeat</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/louder</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/voice-over</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/voice-over-game</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/voice-acting</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/dino</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/flap</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/float</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/3d/dino</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/3d/flap</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://voicegames.org/3d/float</loc>
-    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/"/>
   </url>
   <url>
     <loc>https://voicegames.org/privacy</loc>
-    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/privacy"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/voice-over-game</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/voice-over-game"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/voice-over-game"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/3d/dino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/3d/dino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/3d/dino"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/3d/flap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/3d/flap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/3d/flap"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/3d/float</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/3d/float"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/3d/float"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/dino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/dino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/dino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/dino"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/dino"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/dino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/dino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/dino"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/dino"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/dino"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/dino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/dino"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/flap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/flap"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/flap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/flap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/flap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/flap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/flap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/flap"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/flap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/flap"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/flap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/flap"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/float</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/float"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/float"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/float"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/float"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/float"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/float"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/float"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/float"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/float"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/float"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/float"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/louder</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/louder"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/louder"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/louder"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/louder"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/louder"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/louder"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/louder"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/louder"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/louder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/louder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/louder"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/miner</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/miner"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/miner"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/miner"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/miner"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/miner"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/miner"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/miner"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/miner"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/miner"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/miner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/miner"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/floors</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/floors"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/floors"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/floors"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/floors"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/floors"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/floors"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/floors"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/floors"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/floors"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/floors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/floors"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/catch</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/catch"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/catch"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/catch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/catch"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/catch"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/catch"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/catch"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/catch"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/catch"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/catch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/catch"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/racer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/racer"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/racer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/racer"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/racer"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/racer"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/racer"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/racer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/racer"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/racer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/racer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/racer"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/bricks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/bricks"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/bricks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/bricks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/bricks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/bricks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/bricks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/bricks"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/bricks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/bricks"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/bricks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/bricks"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/snake</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/snake"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/snake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/snake"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/snake"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/snake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/snake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/snake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/snake"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/snake"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/snake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/snake"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/march</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/march"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/march"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/march"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/march"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/march"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/march"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/march"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/march"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/march"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/march"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/march"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/tug</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/tug"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/tug"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/tug"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/tug"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/tug"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/tug"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/tug"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/tug"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/tug"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/tug"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/tug"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/puff</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/puff"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/puff"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/puff"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/puff"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/puff"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/puff"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/puff"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/puff"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/puff"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/puff"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/puff"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/hop</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/hop"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/hop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/hop"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/hop"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/hop"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/hop"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/hop"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/hop"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/hop"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/hop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/hop"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/3d/miner</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/3d/miner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/3d/miner"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/3d/floors</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/3d/floors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/3d/floors"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/say</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/say"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/say"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/say"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/say"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/say"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/say"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/say"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/say"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/say"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/say"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/say"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/count</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/count"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/count"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/count"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/count"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/count"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/count"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/count"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/count"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/count"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/count"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/count"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/repeat</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/repeat"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/repeat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/repeat"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/repeat"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/repeat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/repeat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/repeat"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/repeat"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/repeat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/repeat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/repeat"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/voice-over</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/voice-over"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/voice-over"/>
+  </url>
+  <url>
+    <loc>https://voicegames.org/voice-acting</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voicegames.org/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://voicegames.org/zh/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voicegames.org/es/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voicegames.org/ja/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://voicegames.org/pt/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://voicegames.org/fr/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://voicegames.org/de/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://voicegames.org/it/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://voicegames.org/ko/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voicegames.org/ru/voice-acting"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voicegames.org/voice-acting"/>
   </url>
 </urlset>
