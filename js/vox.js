@@ -219,23 +219,23 @@ void main() {
 precision mediump float;
 varying vec3 vCol;
 varying float vZ;
+uniform vec3 uHaze;
 void main() {
   float fog = clamp((vZ - 78.0) / 70.0, 0.0, 0.35);
-  vec3 haze = vec3(0.53, 0.78, 0.92);
-  gl_FragColor = vec4(mix(vCol, haze, fog), 1.0);
+  gl_FragColor = vec4(mix(vCol, uHaze, fog), 1.0);
 }`
   const SKY_VS = `attribute vec2 a; varying vec2 v; void main(){ v = a; gl_Position = vec4(a, 1.0, 1.0); }`
   const SKY_FS = `
 precision mediump float;
 varying vec2 v;
+uniform vec3 uHor;
+uniform vec3 uTop;
 void main() {
   float t = v.y * 0.5 + 0.5;
-  vec3 hor = vec3(0.97, 0.78, 0.55);
-  vec3 top = vec3(0.35, 0.74, 0.93);
-  gl_FragColor = vec4(mix(hor, top, smoothstep(0.05, 0.72, t)), 1.0);
+  gl_FragColor = vec4(mix(uHor, uTop, smoothstep(0.05, 0.72, t)), 1.0);
 }`
 
-  let gl, glCanvas, boxProg, skyProg, uVP, uOff, uSize, uColor
+  let gl, glCanvas, boxProg, skyProg, uVP, uOff, uSize, uColor, uHor, uTop
   function shader(type, src) {
     const s = gl.createShader(type)
     gl.shaderSource(s, src)
@@ -263,6 +263,10 @@ void main() {
     uOff = gl.getUniformLocation(boxProg, "uOff")
     uSize = gl.getUniformLocation(boxProg, "uSize")
     uColor = gl.getUniformLocation(boxProg, "uColor")
+    gl.uHaze = gl.getUniformLocation(boxProg, "uHaze")
+    gl.useProgram(skyProg)
+    uHor = gl.getUniformLocation(skyProg, "uHor")
+    uTop = gl.getUniformLocation(skyProg, "uTop")
     const faces = [
       [[0, 1, 0], [0, 1, 0], [1, 1, 0], [1, 1, 1], [0, 1, 1]],
       [[0, -1, 0], [0, 0, 1], [1, 0, 1], [1, 0, 0], [0, 0, 0]],
@@ -297,7 +301,7 @@ void main() {
     gl.boxBuf = buf
     return true
   }
-  function paint(ctx, W, H, eye, at) {
+  function paint(ctx, W, H, eye, at, sky, shake) {
     let ok = false
     try { ok = boot() } catch (e) { console.error(e) }
     if (!ok) {
@@ -305,6 +309,11 @@ void main() {
       ctx.fillRect(0, 0, W, H)
       batch.length = 0
       return
+    }
+    sky = sky || SKIES.hop
+    if (shake > 0) {
+      eye = [eye[0] + (Math.random() - .5) * shake * .5, eye[1] + (Math.random() - .5) * shake * .5, eye[2]]
+      at = [at[0], at[1] + (Math.random() - .5) * shake * .25, at[2]]
     }
     const dpr = Math.min(2, (typeof window !== "undefined" && window.devicePixelRatio) || 1)
     const pw = Math.round(W * dpr)
@@ -314,10 +323,12 @@ void main() {
       glCanvas.height = ph
     }
     gl.viewport(0, 0, pw, ph)
-    gl.clearColor(0.45, 0.76, 0.93, 1)
+    gl.clearColor(sky.clear[0], sky.clear[1], sky.clear[2], 1)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
     gl.disable(gl.DEPTH_TEST)
     gl.useProgram(skyProg)
+    gl.uniform3f(uHor, sky.hor[0], sky.hor[1], sky.hor[2])
+    gl.uniform3f(uTop, sky.top[0], sky.top[1], sky.top[2])
     gl.bindBuffer(gl.ARRAY_BUFFER, gl.skyBuf)
     const skyA = gl.getAttribLocation(skyProg, "a")
     gl.enableVertexAttribArray(skyA)
@@ -325,6 +336,7 @@ void main() {
     gl.drawArrays(gl.TRIANGLES, 0, 6)
     gl.enable(gl.DEPTH_TEST)
     gl.useProgram(boxProg)
+    gl.uniform3f(gl.uHaze, sky.hor[0] * .85 + .08, sky.hor[1] * .85 + .08, sky.hor[2] * .85 + .08)
     gl.bindBuffer(gl.ARRAY_BUFFER, gl.boxBuf)
     const stride = 24
     const pos = gl.getAttribLocation(boxProg, "aPos")
@@ -346,26 +358,159 @@ void main() {
     ctx.drawImage(glCanvas, 0, 0, W, H)
   }
 
+  const SKIES = {
+    hop: { hor: [0.97, 0.78, 0.55], top: [0.35, 0.74, 0.93], clear: [0.45, 0.76, 0.93] },
+    flap: { hor: [0.93, 0.55, 0.38], top: [0.16, 0.19, 0.38], clear: [0.24, 0.26, 0.44] },
+    float: { hor: [1.0, 0.85, 0.6], top: [0.98, 0.58, 0.34], clear: [0.99, 0.68, 0.45] },
+    miner: { hor: [0.36, 0.25, 0.15], top: [0.13, 0.09, 0.05], clear: [0.17, 0.12, 0.07] },
+    floors: { hor: [0.22, 0.15, 0.11], top: [0.07, 0.05, 0.04], clear: [0.1, 0.07, 0.05] }
+  }
+  function clouds(drift) {
+    const span = 150
+    for (let i = 0; i < 4; i++) {
+      const x = ((i * 47 - drift * 0.35) % span + span) % span - 15
+      const y = 25 + (i % 3) * 3.5
+      const s = 1 + (i % 2) * .55
+      box(x, y, -14, 5.2 * s, 1.6 * s, 2.6 * s, "#fff6ea")
+      box(x + 3.4 * s, y + 1.1 * s, -13.6, 3.6 * s, 1.4 * s, 2.1 * s, "#f0e0cc")
+    }
+  }
+  function hills(drift) {
+    const span = 64
+    for (let i = 0; i < 5; i++) {
+      const x = ((i * 23 - drift) % span + span) % span - 28
+      const h = 4.5 + ((i * 7) % 5)
+      box(x, 0, -20, 15, h, 5, i % 2 ? "#c9985e" : "#b9884f")
+      box(x + 3, h, -19.3, 8, 1.6, 3.8, i % 2 ? "#d6ab6c" : "#c69a60")
+    }
+  }
   function hop(ctx, view) {
+    hills(view.drift * .5)
+    clouds(view.drift)
     ground(view.drift)
     moon()
     for (const s of view.stones) stack(s, 150)
     dino(Math.max(0, (view.LINE - 22 - view.y) * SCALE), view.pace)
-    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT)
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT, SKIES.hop, view.shake)
   }
   function flap(ctx, view) {
+    hills(view.drift * .5)
+    clouds(view.drift * .7)
     ground(view.drift)
-    moon()
     for (const g of view.gates) gate(g, view.GROUND, view.BX)
     moth((view.GROUND - view.y) * SCALE, view.pace)
-    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT)
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT, SKIES.flap, view.shake)
   }
   function float(ctx, view) {
+    hills(0)
+    clouds(view.drift * .6)
     ground(0)
     moon()
     for (const hole of view.holes) ring(hole)
     balloon((360 - view.y) * SCALE)
-    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT)
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, EYE, AT, SKIES.float, view.shake)
   }
-  return { hop, flap, float }
+  // ---- Miner 3D: blocky mine with a swinging claw over gold veins ----
+  const ITEM_STYLE = {
+    "gold-s": { s: 2.0, c: "#f0b15a", top: "#ffd15a" },
+    "gold-b": { s: 3.0, c: "#f0b15a", top: "#ffd15a" },
+    "rock": { s: 2.6, c: "#7d7468", top: "#948a7c" },
+    "gem": { s: 1.8, c: "#7ec8ea", top: "#c8e9f8" }
+  }
+  function minerGround() {
+    const G = 8
+    for (let x = -30; x <= 122; x += G) {
+      for (let z = -10; z <= 6; z += G) {
+        box(x, -0.5, z, G - 0.3, 0.5, G - 0.3, ((x / G + z / G) | 0) % 2 ? "#6e4526" : "#7c5033")
+      }
+    }
+    // back wall of the cave
+    for (let x = -30; x <= 122; x += 10) {
+      box(x, 14, -13, 9.6, 30, 1.6, ((x / 10) | 0) % 2 ? "#4a3423" : "#57402b")
+    }
+  }
+  function minerRopeAndClaw() {
+    const len = Math.max(10, view.mLen) * 0.095
+    const a = view.mAngle || 0
+    const sx = Math.sin(a), cy = Math.cos(a)
+    const topY = 27.6
+    for (let d = 1.2; d < len; d += 2.6) {
+      box(sx * d, topY - cy * d, -1, 0.4, 0.4, 0.4, "#e7d7b8")
+    }
+    const cx = sx * len, cyy = topY - cy * len
+    box(cx - 1.4, cyy - 0.4, -1.15, 1.1, 1.6, 1.1, "#b8b2a8")
+    box(cx + 0.4, cyy - 0.4, -1.15, 1.1, 1.6, 1.1, "#b8b2a8")
+    box(cx - 0.6, cyy + 0.7, -1.15, 1.4, 1.1, 1.1, "#8f887c")
+    if (view.mLoad) {
+      const st = ITEM_STYLE[view.mLoad.type] || ITEM_STYLE["gold-s"]
+      box(cx - st.s / 2, cyy - st.s - 1.4, -1 - st.s / 2, st.s, st.s, st.s, st.c)
+      box(cx - st.s / 4, cyy - st.s - 0.9, -1 - st.s / 4, st.s / 2, st.s / 2, st.s / 2, st.top)
+    }
+  }
+  function miner(ctx, v) {
+    view = v
+    minerGround()
+    // head frame + pulley + lamp
+    box(-6.2, 0, -1.1, 1.4, 29, 1.4, "#8a5a34")
+    box(4.8, 0, -1.1, 1.4, 29, 1.4, "#8a5a34")
+    box(-7.4, 28.2, -1.7, 14.8, 1.6, 2.6, "#8a5a34")
+    box(-7.4, 29.6, -1.7, 14.8, 0.5, 2.6, "#c9844a")
+    box(-1.2, 26.6, -1.5, 2.4, 2.4, 2.4, "#c9844a")
+    box(-0.4, 27.3, -0.9, 0.8, 0.8, 0.8, "#24160f")
+    box(-1.4, 30.3, -1.5, 2.8, 0.9, 2.8, "#ffd15a")
+    // gold veins / rocks / gems resting in the dirt
+    for (const it of v.mItems || []) {
+      const st = ITEM_STYLE[it.type] || ITEM_STYLE["gold-s"]
+      const X = (it.x - 400) * 0.105
+      const Z = -1 + ((it.y - 190) / 140) * 9
+      box(X - st.s / 2, 0.2, Z - st.s / 2, st.s, st.s, st.s, st.c)
+      box(X - st.s / 4, st.s + 0.1, Z - st.s / 4, st.s / 2, st.s / 2, st.s / 2, st.top)
+    }
+    minerRopeAndClaw()
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, [3, 21, 66], [10, 15, 0], SKIES.miner, v.shake)
+  }
+
+  // ---- Floors 3D: blocky shaft, the climber sinking past strata and spikes ----
+  function floors(ctx, v) {
+    const SC = 0.115
+    const fy = v.guyY - 130
+    const Yc = -fy * SC
+    const X = gx => (gx - 400) * 0.092
+    // shaft walls
+    box(-38.5, Yc, -2.5, 4, 90, 6, "#3a2a1c")
+    box(34.5, Yc, -2.5, 4, 90, 6, "#3a2a1c")
+    // strata slabs
+    for (const p of v.plats || []) {
+      if (Math.abs(p.y - fy) > 330) continue
+      const Y = -p.y * SC
+      const x0 = X(p.x0), x1 = X(p.x1)
+      box(x0, Y - 1, -2.5, x1 - x0, 1.1, 5, p.spike ? "#57424f" : "#8a5a34")
+      box(x0, Y - 0.1, -2.5, x1 - x0, 0.35, 5, p.spike ? "#6d5560" : "#c9844a")
+      if (p.spike) {
+        for (let sx = x0 + 1.4; sx < x1 - 1; sx += 2.6) {
+          box(sx, Y + 0.25, -2.2, 1.1, 1.1, 1.1, "#ff4d3a")
+        }
+      }
+    }
+    // spiked ceiling
+    const cy2 = -v.fCeil * SC
+    if (Math.abs(v.fCeil - fy) < 400) {
+      box(-38, cy2 - 2.6, -2.5, 76, 2.8, 5.5, "#3d2f3a")
+      box(-38, cy2 - 0.4, -2.5, 76, 0.5, 5.5, "#57424f")
+      for (let sx = -36; sx < 36; sx += 3.4) {
+        box(sx, cy2 + 0.4, -2.2, 1.3, 1.3, 1.3, "#ff4d3a")
+      }
+    }
+    // the climber
+    const gx = X(v.guyX), gy = -v.guyY * SC
+    box(gx - 2.2, gy, -1.2, 1.4, 2.4, 1.4, "#24160f")
+    box(gx + 0.8, gy, -1.2, 1.4, 2.4, 1.4, "#24160f")
+    box(gx - 2.6, gy + 2.2, -1.35, 5.2, 5.4, 2.7, "#e15a2b")
+    box(gx - 2.2, gy + 7.4, -1.35, 4.4, 4.2, 2.5, "#f6d7a8")
+    box(gx - 2.7, gy + 10.6, -1.4, 5.4, 1.4, 2.7, "#f0b15a")
+    box(gx + 1.2, gy + 10.8, -1.3, 1.5, 1, 1.6, "#ffd15a")
+    paint(ctx, ctx.canvas.width, ctx.canvas.height, [8, Yc + 15, 58], [28, Yc + 1, 0], SKIES.floors, v.shake)
+  }
+  let view = null
+  return { hop, flap, float, miner, floors }
 })()
